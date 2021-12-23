@@ -16,6 +16,7 @@
 		D18BEC3927744F4D00355FAB /* theMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC3827744F4D00355FAB /* theMovieDBTests.swift */; };
 		D18BEC4327744F4D00355FAB /* theMovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC4227744F4D00355FAB /* theMovieDBUITests.swift */; };
 		D18BEC4527744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC4427744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift */; };
+		D18BEC56277520D600355FAB /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC55277520D600355FAB /* NetworkConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D18BEC3E27744F4D00355FAB /* theMovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = theMovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18BEC4227744F4D00355FAB /* theMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theMovieDBUITests.swift; sourceTree = "<group>"; };
 		D18BEC4427744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D18BEC55277520D600355FAB /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D18BEC2A27744F4D00355FAB /* Assets.xcassets */,
 				D18BEC2C27744F4D00355FAB /* LaunchScreen.storyboard */,
 				D18BEC2F27744F4D00355FAB /* Info.plist */,
+				D18BEC55277520D600355FAB /* NetworkConstants.swift */,
 			);
 			path = theMovieDB;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18BEC56277520D600355FAB /* NetworkConstants.swift in Sources */,
 				D18BEC2627744F4400355FAB /* ViewController.swift in Sources */,
 				D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */,
 				D18BEC2427744F4400355FAB /* SceneDelegate.swift in Sources */,
