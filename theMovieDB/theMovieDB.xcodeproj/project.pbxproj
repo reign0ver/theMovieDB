@@ -20,6 +20,7 @@
 		D18BEC5827753AAC00355FAB /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5727753AAC00355FAB /* EndpointType.swift */; };
 		D18BEC5A27753AE400355FAB /* MoviesEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5927753AE400355FAB /* MoviesEndpoints.swift */; };
 		D18BEC5C27753AF500355FAB /* TVShowEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */; };
+		D18BEC5E27753FBD00355FAB /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5D27753FBD00355FAB /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D18BEC5727753AAC00355FAB /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
 		D18BEC5927753AE400355FAB /* MoviesEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEndpoints.swift; sourceTree = "<group>"; };
 		D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowEndpoints.swift; sourceTree = "<group>"; };
+		D18BEC5D27753FBD00355FAB /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				D18BEC5727753AAC00355FAB /* EndpointType.swift */,
 				D18BEC5927753AE400355FAB /* MoviesEndpoints.swift */,
 				D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */,
+				D18BEC5D27753FBD00355FAB /* HTTPClient.swift */,
 			);
 			path = theMovieDB;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				D18BEC5827753AAC00355FAB /* EndpointType.swift in Sources */,
 				D18BEC56277520D600355FAB /* NetworkConstants.swift in Sources */,
+				D18BEC5E27753FBD00355FAB /* HTTPClient.swift in Sources */,
 				D18BEC2627744F4400355FAB /* ViewController.swift in Sources */,
 				D18BEC5A27753AE400355FAB /* MoviesEndpoints.swift in Sources */,
 				D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */,
