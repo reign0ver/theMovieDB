@@ -2,10 +2,13 @@
 # platform :ios, '9.0'
 
 target 'theMovieDB' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  inhibit_all_warnings!
 
   # Pods for theMovieDB
+  pod 'Alamofire', '5.5'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
 
   target 'theMovieDBTests' do
     inherit! :search_paths
