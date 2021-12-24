@@ -24,6 +24,7 @@
 		D18BEC6027759E8E00355FAB /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5F27759E8E00355FAB /* ServerResponse.swift */; };
 		D18BEC63277637BB00355FAB /* TVShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC62277637BB00355FAB /* TVShowModel.swift */; };
 		D18BEC65277637E900355FAB /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC64277637E900355FAB /* MovieModel.swift */; };
+		D18BEC6727763B4000355FAB /* TVShowRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D18BEC5F27759E8E00355FAB /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		D18BEC62277637BB00355FAB /* TVShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowModel.swift; sourceTree = "<group>"; };
 		D18BEC64277637E900355FAB /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRemoteDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				D18BEC5927753AE400355FAB /* MoviesEndpoints.swift */,
 				D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */,
 				D18BEC5D27753FBD00355FAB /* HTTPClient.swift */,
+				D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */,
 			);
 			path = theMovieDB;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				D18BEC6027759E8E00355FAB /* ServerResponse.swift in Sources */,
 				D18BEC5A27753AE400355FAB /* MoviesEndpoints.swift in Sources */,
 				D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */,
+				D18BEC6727763B4000355FAB /* TVShowRemoteDataSource.swift in Sources */,
 				D18BEC5C27753AF500355FAB /* TVShowEndpoints.swift in Sources */,
 				D18BEC2427744F4400355FAB /* SceneDelegate.swift in Sources */,
 			);

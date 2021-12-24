@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HTTPClient {
-    func sendRequest<T: Codable>(url: String, of: T.Type)
+    func sendRequest<T: Codable>(url: String, of: T.Type, completion: @escaping (Swift.Result<T, Error>) -> Void)
 }
