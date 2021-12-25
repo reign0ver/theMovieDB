@@ -5,45 +5,46 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
-import Foundation
 import Alamofire
+import RxSwift
 
 final class HTTPClient: HTTPClientType {
     
-    func sendRequest<T: Codable>(_ endpoint: EndpointType, 
-                                 of: T.Type, 
-                                 completion: @escaping NetworkResponse<T>) {
-        
-        guard let urlRequest = try? endpoint.asURLRequest() else {
-            completion(.failure(.invalidURL))
-            return
-        }
-        
-        let dataRequest = AF.request(urlRequest)
-        dataRequest.responseDecodable(of: ServerResponse<T>.self, queue: .global(qos: .background)) { [weak self] dataResponse in
-            switch dataResponse.result {
-            case .success(let serverResponse):
-                completion(.success(serverResponse))
-            case .failure(let error):
-                self?.handleError(error, completion: completion)
+    func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type) -> Single<ServerResponse<T>> {
+        return Single<ServerResponse<T>>.create { emitter -> Disposable in
+            guard let urlRequest = try? endpoint.asURLRequest() else {
+                emitter(.failure(NetworkError.invalidURL))
+                return Disposables.create()
             }
+            
+            let dataRequest = AF.request(urlRequest)
+            dataRequest.responseDecodable(of: ServerResponse<T>.self, queue: .global(qos: .background)) { [weak self] dataResponse in
+                switch dataResponse.result {
+                case .success(let serverResponse):
+                    emitter(.success(serverResponse))
+                case .failure(let error):
+                    self?.handleError(error, emitter: emitter)
+                }
+            }
+            
+            return Disposables.create()
         }
     }
     
-    private func handleError<T: Codable>(_ error: AFError, completion: @escaping NetworkResponse<T>) {
+    private func handleError<T: Codable>(_ error: AFError, emitter: (SingleEvent<ServerResponse<T>>) -> Void) {
         if error.isResponseSerializationError {
-            completion(.failure(.responseSerializacion))
+            emitter(.failure(NetworkError.responseSerializacion))
         } else if error.isInvalidURLError {
-            completion(.failure(.invalidURL))
+            emitter(.failure(NetworkError.invalidURL))
         } else if let urlError = error.underlyingError as? URLError {
             switch urlError.code {
             case .notConnectedToInternet:
-                completion(.failure(.noInternetConnection))
+                emitter(.failure(NetworkError.noInternetConnection))
             default:
-                completion(.failure(.unhandledError))
+                emitter(.failure(NetworkError.unhandledError))
             }
         } else {
-            completion(.failure(.unhandledError))
+            emitter(.failure(NetworkError.unhandledError))
         }
     }
 }

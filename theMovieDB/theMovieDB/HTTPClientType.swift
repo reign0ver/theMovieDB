@@ -5,12 +5,10 @@
 //  Created by Andres Enrique Carrillo Miranda on 23/12/21.
 //
 
-import Foundation
-
-typealias NetworkResponse<T: Codable> = (Swift.Result<ServerResponse<T>, NetworkError>) -> Void
+import RxSwift
 
 protocol HTTPClientType {
-    func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type, completion: @escaping (Swift.Result<ServerResponse<T>, NetworkError>) -> Void)
+    func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type) -> Single<ServerResponse<T>>
 }
 
 enum NetworkError: Swift.Error {
