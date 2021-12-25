@@ -10,9 +10,6 @@
 		D182C73B2777032600C8303A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D182C7322777032600C8303A /* Domain.framework */; };
 		D182C7402777032600C8303A /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D182C73F2777032600C8303A /* DomainTests.swift */; };
 		D182C7412777032600C8303A /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = D182C7352777032600C8303A /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D182C7502777053E00C8303A /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D182C74F2777053E00C8303A /* MovieModel.swift */; };
-		D182C7532777056700C8303A /* TVShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D182C7512777056700C8303A /* TVShowModel.swift */; };
-		D182C7542777056700C8303A /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D182C7522777056700C8303A /* ServerResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +27,6 @@
 		D182C7352777032600C8303A /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		D182C73A2777032600C8303A /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D182C73F2777032600C8303A /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
-		D182C74F2777053E00C8303A /* MovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
-		D182C7512777056700C8303A /* TVShowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowModel.swift; sourceTree = "<group>"; };
-		D182C7522777056700C8303A /* ServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +102,13 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		D17E65CD2777A705006F68D8 /* TVShow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TVShow;
+			sourceTree = "<group>";
+		};
 		D182C7282777032600C8303A = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +132,7 @@
 			children = (
 				D17E657F277794BC006F68D8 /* MovieList */,
 				D17E6580277794C5006F68D8 /* MovieDetail */,
-				D182C74E2777052B00C8303A /* Models */,
+				D17E65CD2777A705006F68D8 /* TVShow */,
 				D182C7352777032600C8303A /* Domain.h */,
 			);
 			path = Domain;
@@ -143,16 +144,6 @@
 				D182C73F2777032600C8303A /* DomainTests.swift */,
 			);
 			path = DomainTests;
-			sourceTree = "<group>";
-		};
-		D182C74E2777052B00C8303A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D182C7522777056700C8303A /* ServerResponse.swift */,
-				D182C7512777056700C8303A /* TVShowModel.swift */,
-				D182C74F2777053E00C8303A /* MovieModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D182C7532777056700C8303A /* TVShowModel.swift in Sources */,
-				D182C7542777056700C8303A /* ServerResponse.swift in Sources */,
-				D182C7502777053E00C8303A /* MovieModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +462,6 @@
 		D182C7482777032600C8303A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5R3NRRRC6P;
@@ -496,7 +483,6 @@
 		D182C7492777032600C8303A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5R3NRRRC6P;

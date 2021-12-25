@@ -6,7 +6,6 @@
 //
 
 import RxSwift
-import Domain
 
 protocol TVShowRemoteDataSourceType {
     func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>>

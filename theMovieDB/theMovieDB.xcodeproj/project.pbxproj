@@ -10,8 +10,6 @@
 		05A0FAEB09884FB90A8E4A10 /* Pods_theMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAE7D4B127C3144AB662BE9 /* Pods_theMovieDB.framework */; };
 		1125DD77AFD5889471D14F39 /* Pods_theMovieDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDC3690BF4A2E3BDDC1D252 /* Pods_theMovieDBTests.framework */; };
 		BD439EE70BD35EC96B4FF7AC /* Pods_theMovieDB_theMovieDBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839E5CF1AB4403DC2CA0D350 /* Pods_theMovieDB_theMovieDBUITests.framework */; };
-		D182C6892776C0A400C8303A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D182C6882776C0A400C8303A /* HTTPClient.swift */; };
-		D182C68B2776EC0600C8303A /* MovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D182C68A2776EC0600C8303A /* MovieRemoteDataSource.swift */; };
 		D182C756277705C400C8303A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D182C755277705C400C8303A /* Domain.framework */; };
 		D182C757277705C400C8303A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D182C755277705C400C8303A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC2127744F4400355FAB /* AppDelegate.swift */; };
@@ -23,13 +21,6 @@
 		D18BEC3927744F4D00355FAB /* theMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC3827744F4D00355FAB /* theMovieDBTests.swift */; };
 		D18BEC4327744F4D00355FAB /* theMovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC4227744F4D00355FAB /* theMovieDBUITests.swift */; };
 		D18BEC4527744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC4427744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift */; };
-		D18BEC56277520D600355FAB /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC55277520D600355FAB /* NetworkConstants.swift */; };
-		D18BEC5827753AAC00355FAB /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5727753AAC00355FAB /* EndpointType.swift */; };
-		D18BEC5A27753AE400355FAB /* MoviesEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5927753AE400355FAB /* MoviesEndpoints.swift */; };
-		D18BEC5C27753AF500355FAB /* TVShowEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */; };
-		D18BEC5E27753FBD00355FAB /* HTTPClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC5D27753FBD00355FAB /* HTTPClientType.swift */; };
-		D18BEC6727763B4000355FAB /* TVShowRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */; };
-		D18BEC6927769BB500355FAB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC6827769BB400355FAB /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +63,6 @@
 		839E5CF1AB4403DC2CA0D350 /* Pods_theMovieDB_theMovieDBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theMovieDB_theMovieDBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D91805C054FB129F6A4294 /* Pods-theMovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMovieDB.debug.xcconfig"; path = "Target Support Files/Pods-theMovieDB/Pods-theMovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 		B4F4315A75C23B8FB821C5BA /* Pods-theMovieDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMovieDBTests.release.xcconfig"; path = "Target Support Files/Pods-theMovieDBTests/Pods-theMovieDBTests.release.xcconfig"; sourceTree = "<group>"; };
-		D182C6882776C0A400C8303A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		D182C68A2776EC0600C8303A /* MovieRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRemoteDataSource.swift; sourceTree = "<group>"; };
 		D182C755277705C400C8303A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18BEC1E27744F4400355FAB /* theMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18BEC2127744F4400355FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,13 +77,6 @@
 		D18BEC3E27744F4D00355FAB /* theMovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = theMovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18BEC4227744F4D00355FAB /* theMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theMovieDBUITests.swift; sourceTree = "<group>"; };
 		D18BEC4427744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D18BEC55277520D600355FAB /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
-		D18BEC5727753AAC00355FAB /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
-		D18BEC5927753AE400355FAB /* MoviesEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEndpoints.swift; sourceTree = "<group>"; };
-		D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowEndpoints.swift; sourceTree = "<group>"; };
-		D18BEC5D27753FBD00355FAB /* HTTPClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientType.swift; sourceTree = "<group>"; };
-		D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRemoteDataSource.swift; sourceTree = "<group>"; };
-		D18BEC6827769BB400355FAB /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		E52315AEAEEF9DFE2F5B643C /* Pods-theMovieDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMovieDBTests.debug.xcconfig"; path = "Target Support Files/Pods-theMovieDBTests/Pods-theMovieDBTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +147,13 @@
 			path = MovieDetails;
 			sourceTree = "<group>";
 		};
+		D17E65CE2777A71C006F68D8 /* TVShow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TVShow;
+			sourceTree = "<group>";
+		};
 		D18BEC1527744F4400355FAB = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +181,7 @@
 			children = (
 				D17E657D2777932E006F68D8 /* MovieList */,
 				D17E657E27779369006F68D8 /* MovieDetails */,
+				D17E65CE2777A71C006F68D8 /* TVShow */,
 				D18BEC2127744F4400355FAB /* AppDelegate.swift */,
 				D18BEC2327744F4400355FAB /* SceneDelegate.swift */,
 				D18BEC2527744F4400355FAB /* ViewController.swift */,
@@ -199,15 +189,6 @@
 				D18BEC2A27744F4D00355FAB /* Assets.xcassets */,
 				D18BEC2C27744F4D00355FAB /* LaunchScreen.storyboard */,
 				D18BEC2F27744F4D00355FAB /* Info.plist */,
-				D18BEC55277520D600355FAB /* NetworkConstants.swift */,
-				D18BEC5727753AAC00355FAB /* EndpointType.swift */,
-				D18BEC5927753AE400355FAB /* MoviesEndpoints.swift */,
-				D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */,
-				D18BEC5D27753FBD00355FAB /* HTTPClientType.swift */,
-				D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */,
-				D18BEC6827769BB400355FAB /* HTTPMethod.swift */,
-				D182C6882776C0A400C8303A /* HTTPClient.swift */,
-				D182C68A2776EC0600C8303A /* MovieRemoteDataSource.swift */,
 			);
 			path = theMovieDB;
 			sourceTree = "<group>";
@@ -469,17 +450,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D18BEC5827753AAC00355FAB /* EndpointType.swift in Sources */,
-				D18BEC56277520D600355FAB /* NetworkConstants.swift in Sources */,
-				D18BEC5E27753FBD00355FAB /* HTTPClientType.swift in Sources */,
 				D18BEC2627744F4400355FAB /* ViewController.swift in Sources */,
-				D18BEC5A27753AE400355FAB /* MoviesEndpoints.swift in Sources */,
 				D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */,
-				D18BEC6727763B4000355FAB /* TVShowRemoteDataSource.swift in Sources */,
-				D182C6892776C0A400C8303A /* HTTPClient.swift in Sources */,
-				D182C68B2776EC0600C8303A /* MovieRemoteDataSource.swift in Sources */,
-				D18BEC6927769BB500355FAB /* HTTPMethod.swift in Sources */,
-				D18BEC5C27753AF500355FAB /* TVShowEndpoints.swift in Sources */,
 				D18BEC2427744F4400355FAB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

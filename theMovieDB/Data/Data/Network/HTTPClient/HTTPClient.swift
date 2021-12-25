@@ -7,7 +7,6 @@
 
 import Alamofire
 import RxSwift
-import Domain
 
 final class HTTPClient: HTTPClientType {
     

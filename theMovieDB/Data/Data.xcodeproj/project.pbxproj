@@ -12,6 +12,18 @@
 		D17E659F2777A25F006F68D8 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = D17E65932777A25F006F68D8 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D17E65AA2777A31D006F68D8 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17E65A92777A31D006F68D8 /* Domain.framework */; };
 		D17E65AB2777A31E006F68D8 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D17E65A92777A31D006F68D8 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D17E65B72777A4F2006F68D8 /* TVShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65B42777A4F2006F68D8 /* TVShowModel.swift */; };
+		D17E65B82777A4F2006F68D8 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65B52777A4F2006F68D8 /* MovieModel.swift */; };
+		D17E65B92777A4F2006F68D8 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65B62777A4F2006F68D8 /* ServerResponse.swift */; };
+		D17E65BF2777A5E1006F68D8 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65BC2777A5E1006F68D8 /* HTTPClient.swift */; };
+		D17E65C02777A5E1006F68D8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65BD2777A5E1006F68D8 /* HTTPMethod.swift */; };
+		D17E65C12777A5E1006F68D8 /* HTTPClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65BE2777A5E1006F68D8 /* HTTPClientType.swift */; };
+		D17E65C62777A629006F68D8 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65C32777A628006F68D8 /* EndpointType.swift */; };
+		D17E65C72777A629006F68D8 /* TVShowEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65C42777A629006F68D8 /* TVShowEndpoints.swift */; };
+		D17E65C82777A629006F68D8 /* MoviesEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65C52777A629006F68D8 /* MoviesEndpoints.swift */; };
+		D17E65D42777A7D0006F68D8 /* TVShowRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65D32777A7D0006F68D8 /* TVShowRemoteDataSource.swift */; };
+		D17E65D62777A7D6006F68D8 /* MovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65D52777A7D6006F68D8 /* MovieRemoteDataSource.swift */; };
+		D17E65D82777A7FB006F68D8 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65D72777A7FB006F68D8 /* NetworkConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +56,18 @@
 		D17E65982777A25F006F68D8 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17E659D2777A25F006F68D8 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		D17E65A92777A31D006F68D8 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17E65B42777A4F2006F68D8 /* TVShowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowModel.swift; sourceTree = "<group>"; };
+		D17E65B52777A4F2006F68D8 /* MovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		D17E65B62777A4F2006F68D8 /* ServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		D17E65BC2777A5E1006F68D8 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		D17E65BD2777A5E1006F68D8 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D17E65BE2777A5E1006F68D8 /* HTTPClientType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientType.swift; sourceTree = "<group>"; };
+		D17E65C32777A628006F68D8 /* EndpointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		D17E65C42777A629006F68D8 /* TVShowEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowEndpoints.swift; sourceTree = "<group>"; };
+		D17E65C52777A629006F68D8 /* MoviesEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesEndpoints.swift; sourceTree = "<group>"; };
+		D17E65D32777A7D0006F68D8 /* TVShowRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowRemoteDataSource.swift; sourceTree = "<group>"; };
+		D17E65D52777A7D6006F68D8 /* MovieRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRemoteDataSource.swift; sourceTree = "<group>"; };
+		D17E65D72777A7FB006F68D8 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +112,10 @@
 		D17E65922777A25F006F68D8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D17E65CA2777A6B6006F68D8 /* Movie */,
+				D17E65CF2777A734006F68D8 /* TVShow */,
+				D17E65BA2777A593006F68D8 /* Network */,
+				D17E65AD2777A387006F68D8 /* APIModel */,
 				D17E65932777A25F006F68D8 /* Data.h */,
 			);
 			path = Data;
@@ -107,6 +135,94 @@
 				D17E65A92777A31D006F68D8 /* Domain.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D17E65AD2777A387006F68D8 /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65B62777A4F2006F68D8 /* ServerResponse.swift */,
+			);
+			path = APIModel;
+			sourceTree = "<group>";
+		};
+		D17E65BA2777A593006F68D8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65C22777A60D006F68D8 /* Endpoint */,
+				D17E65BB2777A59D006F68D8 /* HTTPClient */,
+				D17E65D72777A7FB006F68D8 /* NetworkConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D17E65BB2777A59D006F68D8 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65BE2777A5E1006F68D8 /* HTTPClientType.swift */,
+				D17E65BD2777A5E1006F68D8 /* HTTPMethod.swift */,
+				D17E65BC2777A5E1006F68D8 /* HTTPClient.swift */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		D17E65C22777A60D006F68D8 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65C32777A628006F68D8 /* EndpointType.swift */,
+				D17E65C52777A629006F68D8 /* MoviesEndpoints.swift */,
+				D17E65C42777A629006F68D8 /* TVShowEndpoints.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		D17E65CA2777A6B6006F68D8 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65CB2777A6D5006F68D8 /* Repository */,
+				D17E65CC2777A6E0006F68D8 /* Model */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		D17E65CB2777A6D5006F68D8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65D52777A7D6006F68D8 /* MovieRemoteDataSource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D17E65CC2777A6E0006F68D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65B52777A4F2006F68D8 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D17E65CF2777A734006F68D8 /* TVShow */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65D02777A762006F68D8 /* Repository */,
+				D17E65D22777A76C006F68D8 /* Model */,
+			);
+			path = TVShow;
+			sourceTree = "<group>";
+		};
+		D17E65D02777A762006F68D8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65D32777A7D0006F68D8 /* TVShowRemoteDataSource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D17E65D22777A76C006F68D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65B42777A4F2006F68D8 /* TVShowModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +288,7 @@
 				TargetAttributes = {
 					D17E658F2777A25F006F68D8 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					D17E65972777A25F006F68D8 = {
 						CreatedOnToolsVersion = 13.1;
@@ -219,6 +336,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17E65D82777A7FB006F68D8 /* NetworkConstants.swift in Sources */,
+				D17E65C62777A629006F68D8 /* EndpointType.swift in Sources */,
+				D17E65B82777A4F2006F68D8 /* MovieModel.swift in Sources */,
+				D17E65D62777A7D6006F68D8 /* MovieRemoteDataSource.swift in Sources */,
+				D17E65B92777A4F2006F68D8 /* ServerResponse.swift in Sources */,
+				D17E65C12777A5E1006F68D8 /* HTTPClientType.swift in Sources */,
+				D17E65BF2777A5E1006F68D8 /* HTTPClient.swift in Sources */,
+				D17E65C02777A5E1006F68D8 /* HTTPMethod.swift in Sources */,
+				D17E65C82777A629006F68D8 /* MoviesEndpoints.swift in Sources */,
+				D17E65D42777A7D0006F68D8 /* TVShowRemoteDataSource.swift in Sources */,
+				D17E65B72777A4F2006F68D8 /* TVShowModel.swift in Sources */,
+				D17E65C72777A629006F68D8 /* TVShowEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +495,7 @@
 		D17E65A32777A25F006F68D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -386,6 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,6 +525,7 @@
 		D17E65A42777A25F006F68D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -422,6 +554,7 @@
 		D17E65A62777A25F006F68D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5R3NRRRC6P;
@@ -443,6 +576,7 @@
 		D17E65A72777A25F006F68D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5R3NRRRC6P;
