@@ -8,10 +8,10 @@
 import Foundation
 
 public struct ServerResponse<T: Codable>: Codable {
-    let page: Int
-    let results: [T]
-    let totalResults: Int
-    let totalPages: Int
+    public let page: Int
+    public let results: [T]
+    public let totalResults: Int
+    public let totalPages: Int
     
     private enum CodingKeys: String, CodingKey {
         case page, results

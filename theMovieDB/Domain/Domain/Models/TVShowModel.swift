@@ -8,16 +8,16 @@
 import Foundation
 
 public struct TVShowModel: Codable {
-    let id: Int
-    let name: String
-    let firstAirDate: String
-    let overview: String
-    let posterPath: String?
-    let backdropPath: String?
-    let voteAverage: Double
-    let originCountry: [String]
-    let genreIDs: [Int]
-    let originalLanguage: String
+    public let id: Int
+    public let name: String
+    public let firstAirDate: String
+    public let overview: String
+    public let posterPath: String?
+    public let backdropPath: String?
+    public let voteAverage: Double
+    public let originCountry: [String]
+    public let genreIDs: [Int]
+    public let originalLanguage: String
     
     private enum CodingKeys: String, CodingKey {
         case id, name
