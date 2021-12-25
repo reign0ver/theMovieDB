@@ -8,9 +8,9 @@
 import RxSwift
 
 protocol MovieRemoteDataSourceType {
-    func getPopularMovies(endpoint: EndpointType) -> Single<ServerResponse<MovieModel>>
-    func getTopRatedMovies(endpoint: EndpointType) -> Single<ServerResponse<MovieModel>>
-    func getUpcomingMovies(endpoint: EndpointType) -> Single<ServerResponse<MovieModel>>
+    func getPopularMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>>
+    func getTopRatedMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>>
+    func getUpcomingMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>>
 }
 
 final class MovieRemoteDataSource: MovieRemoteDataSourceType {
@@ -20,15 +20,15 @@ final class MovieRemoteDataSource: MovieRemoteDataSourceType {
         self.client = client
     }
     
-    func getPopularMovies(endpoint: EndpointType) -> Single<ServerResponse<MovieModel>> {
-        return client.sendRequest(endpoint, of: MovieModel.self)
+    func getPopularMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>> {
+        return client.sendRequest(endpoint, of: APIMovie.self)
     }
     
-    func getTopRatedMovies(endpoint: EndpointType) -> Single<ServerResponse<MovieModel>> {
-        return client.sendRequest(endpoint, of: MovieModel.self)
+    func getTopRatedMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>> {
+        return client.sendRequest(endpoint, of: APIMovie.self)
     }
     
-    func getUpcomingMovies(endpoint: EndpointType) -> Single<ServerResponse<MovieModel>> {
-        return client.sendRequest(endpoint, of: MovieModel.self)
+    func getUpcomingMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>> {
+        return client.sendRequest(endpoint, of: APIMovie.self)
     }
 }

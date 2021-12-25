@@ -8,8 +8,8 @@
 import RxSwift
 
 protocol TVShowRemoteDataSourceType {
-    func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>>
-    func getTopRatedTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>>
+    func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<APITVShow>>
+    func getTopRatedTVShows(endpoint: EndpointType) -> Single<ServerResponse<APITVShow>>
 }
 
 final class TVShowRemoteDataSource: TVShowRemoteDataSourceType {
@@ -20,11 +20,11 @@ final class TVShowRemoteDataSource: TVShowRemoteDataSourceType {
         self.client = client
     }
     
-    func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>> {
-        return client.sendRequest(endpoint, of: TVShowModel.self)
+    func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<APITVShow>> {
+        return client.sendRequest(endpoint, of: APITVShow.self)
     }
     
-    func getTopRatedTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>> {
-        return client.sendRequest(endpoint, of: TVShowModel.self)
+    func getTopRatedTVShows(endpoint: EndpointType) -> Single<ServerResponse<APITVShow>> {
+        return client.sendRequest(endpoint, of: APITVShow.self)
     }
 }

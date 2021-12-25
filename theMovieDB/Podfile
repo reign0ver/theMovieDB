@@ -1,21 +1,39 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '15.0'
 
-target 'theMovieDB' do
-  use_frameworks!
-  inhibit_all_warnings!
+use_frameworks!
+inhibit_all_warnings!
 
-  # Pods for theMovieDB
-  pod 'Alamofire', '5.5.0'
+workspace 'theMovieDB.xcworkspace'
+
+def commonPods
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
+end
+
+def dataPods
+  pod 'Alamofire', '5.5.0'
+end
+
+# Defining Pods for the modules
+target 'theMovieDB' do
+  
+  # Pods for theMovieDB
+  commonPods
+
+  target 'Data' do
+    project 'Data/Data'
+    commonPods
+    dataPods
+  end
+
+  target 'Domain' do
+    project 'Domain/Domain'
+    commonPods
+  end
 
   target 'theMovieDBTests' do
     inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'theMovieDBUITests' do
     # Pods for testing
   end
 
