@@ -19,4 +19,13 @@ enum TVShowEndpoints: EndpointType {
             return "/tv/top_rated"
         }
     }
+    
+    var httpMethod: HTTPMethod {
+        switch self {
+        case .popular, .topRated:
+            return .get
+        }
+    }
+    
+    var params: String? { return nil }
 }

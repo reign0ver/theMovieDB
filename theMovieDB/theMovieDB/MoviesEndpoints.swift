@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum MoviesEndpoints: EndpointType {
     case popular
@@ -22,4 +23,13 @@ enum MoviesEndpoints: EndpointType {
             return "/movie/upcoming"
         }
     }
+    
+    var httpMethod: HTTPMethod {
+        switch self {
+        case .popular, .topRated, .upcoming:
+            return .get
+        }
+    }
+    
+    var params: String? { return nil }
 }

@@ -28,6 +28,7 @@
 		D18BEC63277637BB00355FAB /* TVShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC62277637BB00355FAB /* TVShowModel.swift */; };
 		D18BEC65277637E900355FAB /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC64277637E900355FAB /* MovieModel.swift */; };
 		D18BEC6727763B4000355FAB /* TVShowRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */; };
+		D18BEC6927769BB500355FAB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BEC6827769BB400355FAB /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		D18BEC62277637BB00355FAB /* TVShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowModel.swift; sourceTree = "<group>"; };
 		D18BEC64277637E900355FAB /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRemoteDataSource.swift; sourceTree = "<group>"; };
+		D18BEC6827769BB400355FAB /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		E52315AEAEEF9DFE2F5B643C /* Pods-theMovieDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMovieDBTests.debug.xcconfig"; path = "Target Support Files/Pods-theMovieDBTests/Pods-theMovieDBTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +131,6 @@
 				E52315AEAEEF9DFE2F5B643C /* Pods-theMovieDBTests.debug.xcconfig */,
 				B4F4315A75C23B8FB821C5BA /* Pods-theMovieDBTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -172,6 +173,7 @@
 				D18BEC5B27753AF500355FAB /* TVShowEndpoints.swift */,
 				D18BEC5D27753FBD00355FAB /* HTTPClient.swift */,
 				D18BEC6627763B4000355FAB /* TVShowRemoteDataSource.swift */,
+				D18BEC6827769BB400355FAB /* HTTPMethod.swift */,
 			);
 			path = theMovieDB;
 			sourceTree = "<group>";
@@ -452,6 +454,7 @@
 				D18BEC5A27753AE400355FAB /* MoviesEndpoints.swift in Sources */,
 				D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */,
 				D18BEC6727763B4000355FAB /* TVShowRemoteDataSource.swift in Sources */,
+				D18BEC6927769BB500355FAB /* HTTPMethod.swift in Sources */,
 				D18BEC5C27753AF500355FAB /* TVShowEndpoints.swift in Sources */,
 				D18BEC2427744F4400355FAB /* SceneDelegate.swift in Sources */,
 			);
