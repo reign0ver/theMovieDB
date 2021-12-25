@@ -1,12 +1,12 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '15.0'
 
 target 'theMovieDB' do
   use_frameworks!
   inhibit_all_warnings!
 
   # Pods for theMovieDB
-  pod 'Alamofire', '5.5'
+  pod 'Alamofire', '5.5.0'
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
 
