@@ -5,9 +5,14 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
-import Foundation
+import RxSwift
 
-final class TVShowRemoteDataSource {
+protocol TVShowRemoteDataSourceType {
+    func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>>
+    func getTopRatedTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>>
+}
+
+final class TVShowRemoteDataSource: TVShowRemoteDataSourceType {
     
     private let client: HTTPClientType
     
@@ -15,12 +20,11 @@ final class TVShowRemoteDataSource {
         self.client = client
     }
     
-    func getPopularTVShows(endpoint: EndpointType, completion: @escaping (Swift.Result<ServerResponse<TVShowModel>, Error>) -> Void) {
-        
+    func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>> {
+        return client.sendRequest(endpoint, of: TVShowModel.self)
     }
     
-    func getTopRatedTVShows(endpoint: EndpointType, completion: @escaping (Swift.Result<ServerResponse<TVShowModel>, Error>) -> Void) {
-        
+    func getTopRatedTVShows(endpoint: EndpointType) -> Single<ServerResponse<TVShowModel>> {
+        return client.sendRequest(endpoint, of: TVShowModel.self)
     }
-    
 }
