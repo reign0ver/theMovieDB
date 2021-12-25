@@ -54,6 +54,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D17E657F277794BC006F68D8 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				D17E65822777961B006F68D8 /* Interactor */,
+				D17E658527779AAB006F68D8 /* Repository */,
+				D17E6581277794D5006F68D8 /* Model */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		D17E6580277794C5006F68D8 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D17E658427779636006F68D8 /* Interactor */,
+				D17E65832777962D006F68D8 /* Model */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		D17E6581277794D5006F68D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D17E65822777961B006F68D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D17E65832777962D006F68D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D17E658427779636006F68D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D17E658527779AAB006F68D8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		D182C7282777032600C8303A = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +129,8 @@
 		D182C7342777032600C8303A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D17E657F277794BC006F68D8 /* MovieList */,
+				D17E6580277794C5006F68D8 /* MovieDetail */,
 				D182C74E2777052B00C8303A /* Models */,
 				D182C7352777032600C8303A /* Domain.h */,
 			);
