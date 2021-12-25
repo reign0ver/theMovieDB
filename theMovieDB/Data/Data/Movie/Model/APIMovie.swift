@@ -5,6 +5,8 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
+import Domain
+
 public struct APIMovie: Codable {
     public let id: Int
     public let title: String
@@ -17,6 +19,10 @@ public struct APIMovie: Codable {
     public let genreIDs: [Int]
     public let video: Bool
     public let originalLanguage: String
+    
+    public var movie: Movie { // TODO: Create a mapper maybe
+        return Movie()
+    }
     
     private enum CodingKeys: String, CodingKey {
         case id, title
