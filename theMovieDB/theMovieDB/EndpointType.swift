@@ -22,6 +22,7 @@ extension EndpointType {
     func asURLRequest() throws -> URLRequest {
         var url = try baseURL.asURL()
         url.appendPathComponent(path)
+        url.appendPathComponent("?api_key=\(NetworkConstants.apiKey)") //TODO: this can be a parameter, check it later
         
         var urlRequest = URLRequest(
             url: url, 

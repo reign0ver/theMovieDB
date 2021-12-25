@@ -9,9 +9,9 @@ import Foundation
 
 final class TVShowRemoteDataSource {
     
-    private let client: HTTPClient
+    private let client: HTTPClientType
     
-    init(client: HTTPClient) {
+    init(client: HTTPClientType) {
         self.client = client
     }
     
