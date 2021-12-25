@@ -5,6 +5,8 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
+import Domain
+
 public struct APITVShow: Codable {
     public let id: Int
     public let name: String
@@ -16,6 +18,10 @@ public struct APITVShow: Codable {
     public let originCountry: [String]
     public let genreIDs: [Int]
     public let originalLanguage: String
+    
+    public var tvShow: TVShow {
+        return TVShow()
+    }
     
     private enum CodingKeys: String, CodingKey {
         case id, name
