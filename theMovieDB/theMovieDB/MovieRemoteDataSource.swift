@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Domain
 
 protocol MovieRemoteDataSourceType {
     func getPopularMovies(endpoint: EndpointType) -> Single<ServerResponse<MovieModel>>

@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Domain
 
 protocol HTTPClientType {
     func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type) -> Single<ServerResponse<T>>

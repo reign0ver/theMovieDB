@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ServerResponse<T: Codable>: Codable {
+public struct ServerResponse<T: Codable>: Codable {
     let page: Int
     let results: [T]
     let totalResults: Int
