@@ -5,9 +5,6 @@
 //  Created by Andres Enrique Carrillo Miranda on 23/12/21.
 //
 
-import Foundation
-import Alamofire
-
 enum MoviesEndpoints: EndpointType {
     case popular
     case topRated

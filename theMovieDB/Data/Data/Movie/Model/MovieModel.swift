@@ -5,8 +5,6 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
-import Foundation
-
 public struct MovieModel: Codable {
     public let id: Int
     public let title: String

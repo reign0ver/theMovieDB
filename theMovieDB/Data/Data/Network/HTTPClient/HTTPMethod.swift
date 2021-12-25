@@ -5,8 +5,6 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
-import Foundation
-
 enum HTTPMethod: String {
     case get
     case post

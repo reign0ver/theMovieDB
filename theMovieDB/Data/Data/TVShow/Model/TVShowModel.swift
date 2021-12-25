@@ -5,8 +5,6 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
-import Foundation
-
 public struct TVShowModel: Codable {
     public let id: Int
     public let name: String

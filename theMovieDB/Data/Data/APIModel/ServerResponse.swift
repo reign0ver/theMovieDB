@@ -5,8 +5,6 @@
 //  Created by Andres Enrique Carrillo Miranda on 24/12/21.
 //
 
-import Foundation
-
 public struct ServerResponse<T: Codable>: Codable {
     public let page: Int
     public let results: [T]

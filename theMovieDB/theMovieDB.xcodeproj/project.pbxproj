@@ -133,11 +133,11 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D17E657D2777932E006F68D8 /* MovieList */ = {
+		D17E657D2777932E006F68D8 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = MovieList;
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		D17E657E27779369006F68D8 /* MovieDetails */ = {
@@ -179,7 +179,7 @@
 		D18BEC2027744F4400355FAB /* theMovieDB */ = {
 			isa = PBXGroup;
 			children = (
-				D17E657D2777932E006F68D8 /* MovieList */,
+				D17E657D2777932E006F68D8 /* Movie */,
 				D17E657E27779369006F68D8 /* MovieDetails */,
 				D17E65CE2777A71C006F68D8 /* TVShow */,
 				D18BEC2127744F4400355FAB /* AppDelegate.swift */,
