@@ -25,6 +25,7 @@
 		D1C36D3F27785EE200207A1B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D3E27785EE200207A1B /* Coordinator.swift */; };
 		D1C36D4127785FD300207A1B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D4027785FD300207A1B /* AppCoordinator.swift */; };
 		D1C36D432778617900207A1B /* MovieCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D422778617900207A1B /* MovieCoordinator.swift */; };
+		D1C36D452778CF1900207A1B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D442778CF1900207A1B /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		D1C36D3E27785EE200207A1B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D1C36D4027785FD300207A1B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D1C36D422778617900207A1B /* MovieCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCoordinator.swift; sourceTree = "<group>"; };
+		D1C36D442778CF1900207A1B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				D18BEC2A27744F4D00355FAB /* Assets.xcassets */,
 				D18BEC2C27744F4D00355FAB /* LaunchScreen.storyboard */,
 				D18BEC2F27744F4D00355FAB /* Info.plist */,
+				D1C36D442778CF1900207A1B /* UIColor+Extension.swift */,
 			);
 			path = theMovieDB;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				D1C36D3F27785EE200207A1B /* Coordinator.swift in Sources */,
 				D1C36D3A27784BC400207A1B /* MoviesViewModel.swift in Sources */,
 				D1C36D3C27785C5B00207A1B /* MoviesViewController.swift in Sources */,
+				D1C36D452778CF1900207A1B /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
