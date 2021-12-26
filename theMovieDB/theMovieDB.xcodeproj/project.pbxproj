@@ -23,6 +23,8 @@
 		D1C36D3A27784BC400207A1B /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D3927784BC400207A1B /* MoviesViewModel.swift */; };
 		D1C36D3C27785C5B00207A1B /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D3B27785C5B00207A1B /* MoviesViewController.swift */; };
 		D1C36D3F27785EE200207A1B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D3E27785EE200207A1B /* Coordinator.swift */; };
+		D1C36D4127785FD300207A1B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D4027785FD300207A1B /* AppCoordinator.swift */; };
+		D1C36D432778617900207A1B /* MovieCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D422778617900207A1B /* MovieCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		D1C36D3927784BC400207A1B /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		D1C36D3B27785C5B00207A1B /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		D1C36D3E27785EE200207A1B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D1C36D4027785FD300207A1B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D1C36D422778617900207A1B /* MovieCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				D1C36D3E27785EE200207A1B /* Coordinator.swift */,
+				D1C36D4027785FD300207A1B /* AppCoordinator.swift */,
+				D1C36D422778617900207A1B /* MovieCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -417,6 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C36D432778617900207A1B /* MovieCoordinator.swift in Sources */,
+				D1C36D4127785FD300207A1B /* AppCoordinator.swift in Sources */,
 				D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */,
 				D18BEC2427744F4400355FAB /* SceneDelegate.swift in Sources */,
 				D1C36D3F27785EE200207A1B /* Coordinator.swift in Sources */,
