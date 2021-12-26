@@ -17,13 +17,13 @@ final class TVShowRepository: TVShowRepositoryType {
     
     func getPopularTVShows(params: TVShowParams) -> Single<[TVShow]> {
         return remoteDataSource
-            .getPopularTVShows(endpoint: TVShowEndpoints.popular)
+            .getPopularTVShows(endpoint: TVShowEndpoints.popular(params))
             .map { $0.results.map { $0.tvShow } }
     }
     
     func getTopRatedTVShows(params: TVShowParams) -> Single<[TVShow]> {
         return remoteDataSource
-            .getTopRatedTVShows(endpoint: TVShowEndpoints.topRated)
+            .getTopRatedTVShows(endpoint: TVShowEndpoints.topRated(params))
             .map { $0.results.map { $0.tvShow } }
     }
     

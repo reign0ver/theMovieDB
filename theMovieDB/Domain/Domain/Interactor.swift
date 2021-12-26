@@ -15,7 +15,7 @@ protocol Interactor {
 }
 
 /// Interactor that conforms the RxSwift SingleObservableType
-/// We can create an ObservableInteractor or a CompletableInteractor if we need
+/// We can create an ObservableInteractor(ObservableType) or a CompletableInteractor(CompletableObservableType) if we need
 open class SingleInteractor<P, R>: Interactor {
     
     public typealias Params = P

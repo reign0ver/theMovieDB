@@ -19,7 +19,6 @@
 		D17E65B82777A4F2006F68D8 /* APIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65B52777A4F2006F68D8 /* APIMovie.swift */; };
 		D17E65B92777A4F2006F68D8 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65B62777A4F2006F68D8 /* ServerResponse.swift */; };
 		D17E65BF2777A5E1006F68D8 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65BC2777A5E1006F68D8 /* HTTPClient.swift */; };
-		D17E65C02777A5E1006F68D8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65BD2777A5E1006F68D8 /* HTTPMethod.swift */; };
 		D17E65C12777A5E1006F68D8 /* HTTPClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65BE2777A5E1006F68D8 /* HTTPClientType.swift */; };
 		D17E65C62777A629006F68D8 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65C32777A628006F68D8 /* EndpointType.swift */; };
 		D17E65C72777A629006F68D8 /* TVShowEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65C42777A629006F68D8 /* TVShowEndpoints.swift */; };
@@ -68,7 +67,6 @@
 		D17E65B52777A4F2006F68D8 /* APIMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMovie.swift; sourceTree = "<group>"; };
 		D17E65B62777A4F2006F68D8 /* ServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		D17E65BC2777A5E1006F68D8 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		D17E65BD2777A5E1006F68D8 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		D17E65BE2777A5E1006F68D8 /* HTTPClientType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientType.swift; sourceTree = "<group>"; };
 		D17E65C32777A628006F68D8 /* EndpointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
 		D17E65C42777A629006F68D8 /* TVShowEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowEndpoints.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				D17E65BE2777A5E1006F68D8 /* HTTPClientType.swift */,
-				D17E65BD2777A5E1006F68D8 /* HTTPMethod.swift */,
 				D17E65BC2777A5E1006F68D8 /* HTTPClient.swift */,
 			);
 			path = HTTPClient;
@@ -393,7 +390,6 @@
 				D17E65B92777A4F2006F68D8 /* ServerResponse.swift in Sources */,
 				D17E65C12777A5E1006F68D8 /* HTTPClientType.swift in Sources */,
 				D17E65BF2777A5E1006F68D8 /* HTTPClient.swift in Sources */,
-				D17E65C02777A5E1006F68D8 /* HTTPMethod.swift in Sources */,
 				D17E65C82777A629006F68D8 /* MoviesEndpoints.swift in Sources */,
 				D17E65D42777A7D0006F68D8 /* TVShowRemoteDataSource.swift in Sources */,
 				D17E65B72777A4F2006F68D8 /* APITVShow.swift in Sources */,

@@ -5,10 +5,13 @@
 //  Created by Andres Enrique Carrillo Miranda on 23/12/21.
 //
 
+import Alamofire
+import Domain
+
 enum MoviesEndpoints: EndpointType {
-    case popular
-    case topRated
-    case upcoming
+    case popular(MovieParams)
+    case topRated(MovieParams)
+    case upcoming(MovieParams)
     
     var path: String {
         switch self {
@@ -28,5 +31,19 @@ enum MoviesEndpoints: EndpointType {
         }
     }
     
-    var params: String? { return nil }
+    var params: Parameters? {
+        var params = ["api_key": NetworkConstants.apiKey]
+        switch self {
+        case let .popular(movieParams),
+             let .topRated(movieParams),
+             let .upcoming(movieParams):
+            params["page"] = "\(movieParams.page)"
+        }
+        
+        return params
+    }
+    
+    var encoder: ParameterEncoding {
+        return URLEncoding(destination: .queryString)
+    }
 }

@@ -11,7 +11,8 @@ protocol EndpointType: URLRequestConvertible {
     var baseURL: String { get }
     var path: String { get }
     var httpMethod: HTTPMethod { get }
-    var params: String? { get } // check this type
+    var params: [String: Any]? { get }
+    var encoder: ParameterEncoding { get }
 }
 
 extension EndpointType {
@@ -20,19 +21,14 @@ extension EndpointType {
     }
     
     func asURLRequest() throws -> URLRequest {
-        var url = try baseURL.asURL()
-        url.appendPathComponent(path)
-        url.appendPathComponent("?api_key=\(NetworkConstants.apiKey)") //TODO: this can be a parameter, check it later
+        let url = try baseURL.asURL().appendingPathComponent(path)
+//        url.appendPathComponent("?api_key=\(NetworkConstants.apiKey)") //TODO: this can be a parameter, check it later
         
-        var urlRequest = URLRequest(
-            url: url, 
-            cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, 
-            timeoutInterval: 20
-        )
+        var urlRequest = try URLRequest(url: url, method: httpMethod)
+        urlRequest.timeoutInterval = 20
+        urlRequest.httpMethod = httpMethod.rawValue
+        urlRequest = try encoder.encode(urlRequest, with: params)
         
-        urlRequest.httpMethod = httpMethod.value
-        // TODO: Pending to add logic to encode parameters
-        
-        return URLRequest(url: URL(string: "")!)
+        return urlRequest
     }
 }
