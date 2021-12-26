@@ -20,10 +20,6 @@ public struct APIMovie: Codable {
     public let video: Bool
     public let originalLanguage: String
     
-    public var movie: Movie { // TODO: Create a mapper maybe
-        return Movie()
-    }
-    
     private enum CodingKeys: String, CodingKey {
         case id, title
         case releaseDate = "release_date"
@@ -35,5 +31,17 @@ public struct APIMovie: Codable {
         case genreIDs = "genre_ids"
         case video
         case originalLanguage = "original_language"
+    }
+}
+
+// MARK: Mapping into Domain Object
+extension APIMovie {
+    public var movie: Movie {
+        return Movie(
+            title: title, 
+            releaseDate: releaseDate, 
+            voteAverage: "\(voteAverage)", 
+            imageURL: posterPath ?? ""
+        )
     }
 }
