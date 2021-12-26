@@ -22,6 +22,7 @@
 		D1C36D3827783C6A00207A1B /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D17E65DB2777AEE3006F68D8 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1C36D3A27784BC400207A1B /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D3927784BC400207A1B /* MoviesViewModel.swift */; };
 		D1C36D3C27785C5B00207A1B /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D3B27785C5B00207A1B /* MoviesViewController.swift */; };
+		D1C36D3F27785EE200207A1B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D3E27785EE200207A1B /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		D18BEC4427744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1C36D3927784BC400207A1B /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		D1C36D3B27785C5B00207A1B /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		D1C36D3E27785EE200207A1B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				D17E657D2777932E006F68D8 /* Movie */,
 				D17E657E27779369006F68D8 /* MovieDetails */,
 				D17E65CE2777A71C006F68D8 /* TVShow */,
+				D1C36D3D27785EC600207A1B /* Coordinator */,
 				D18BEC2127744F4400355FAB /* AppDelegate.swift */,
 				D18BEC2327744F4400355FAB /* SceneDelegate.swift */,
 				D18BEC2A27744F4D00355FAB /* Assets.xcassets */,
@@ -206,6 +209,14 @@
 				D18BEC4427744F4D00355FAB /* theMovieDBUITestsLaunchTests.swift */,
 			);
 			path = theMovieDBUITests;
+			sourceTree = "<group>";
+		};
+		D1C36D3D27785EC600207A1B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D1C36D3E27785EE200207A1B /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +419,7 @@
 			files = (
 				D18BEC2227744F4400355FAB /* AppDelegate.swift in Sources */,
 				D18BEC2427744F4400355FAB /* SceneDelegate.swift in Sources */,
+				D1C36D3F27785EE200207A1B /* Coordinator.swift in Sources */,
 				D1C36D3A27784BC400207A1B /* MoviesViewModel.swift in Sources */,
 				D1C36D3C27785C5B00207A1B /* MoviesViewController.swift in Sources */,
 			);
