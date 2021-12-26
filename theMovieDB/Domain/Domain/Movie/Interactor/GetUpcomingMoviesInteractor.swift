@@ -10,7 +10,7 @@ import RxSwift
 public final class GetUpcomingMoviesInteractor: SingleInteractor<MovieParams, [Movie]> {
     private let moviesRepository: MovieRepositoryType
     
-    public init(moviesRepository: MovieRepositoryType) {
+    public init(_ moviesRepository: MovieRepositoryType) {
         self.moviesRepository = moviesRepository
     }
     

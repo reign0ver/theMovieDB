@@ -38,6 +38,7 @@ public struct APIMovie: Codable {
 extension APIMovie {
     public var movie: Movie {
         return Movie(
+            id: id,
             title: title, 
             releaseDate: releaseDate, 
             voteAverage: "\(voteAverage)", 

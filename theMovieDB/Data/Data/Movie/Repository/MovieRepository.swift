@@ -35,3 +35,11 @@ final class MovieRepository: MovieRepositoryType {
 }
 
 public let movieRepository: MovieRepositoryType = MovieRepository()
+
+public protocol DataDependencies {}
+
+extension DataDependencies {
+    static func inject() -> MovieRepositoryType {
+        return MovieRepository()
+    }
+}
