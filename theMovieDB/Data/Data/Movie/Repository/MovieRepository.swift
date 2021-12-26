@@ -33,3 +33,5 @@ final class MovieRepository: MovieRepositoryType {
             .map { $0.results.map { $0.movie } }
     }
 }
+
+public let movieRepository: MovieRepositoryType = MovieRepository()

@@ -20,6 +20,7 @@ target 'theMovieDB' do
   
   # Pods for theMovieDB
   commonPods
+  dataPods
 
   target 'Data' do
     project 'Data/Data'
