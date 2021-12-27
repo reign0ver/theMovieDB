@@ -11,6 +11,6 @@ protocol ReusableIdentifier: AnyObject {
     static var reuseIdentifier: String { get }
 }
 
-extension ReusableIdentifier where self: UIView {
+extension ReusableIdentifier where Self: UIView {
     static var reuseIdentifier: String { return String(describing: self) }
 }
