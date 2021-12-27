@@ -15,14 +15,12 @@ public struct Show {
     }
 }
 
-public enum ShowCategory: Int, CaseIterable {
+public enum ShowCategory {
     case popularMovies
     case topRatedMovies
     case upcomingMovies
     case popularTVShows
     case topRatedTVShows
-    
-    public var index: Int { return rawValue }
     
     public var name: String {
         switch self {
