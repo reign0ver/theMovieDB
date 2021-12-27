@@ -11,7 +11,7 @@ import Domain
 final class TVShowRepository: TVShowRepositoryType {    
     private let remoteDataSource: TVShowRemoteDataSourceType
     
-    init(remoteDataSource: TVShowRemoteDataSourceType) {
+    init(remoteDataSource: TVShowRemoteDataSourceType = TVShowRemoteDataSource()) {
         self.remoteDataSource = remoteDataSource
     }
     
@@ -26,5 +26,6 @@ final class TVShowRepository: TVShowRepositoryType {
             .getTopRatedTVShows(endpoint: TVShowEndpoints.topRated(params))
             .map { $0.results.map { $0.tvShow } }
     }
-    
 }
+
+public let tvShowRepository: TVShowRepositoryType = TVShowRepository()
