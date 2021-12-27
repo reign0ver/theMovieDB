@@ -54,7 +54,7 @@ private extension MoviesViewController {
     }
     
     func setupBinding() {
-        viewModel.getViewStateObservable().observe(on: MainScheduler.instance).subscribe { [weak self] viewStateEvent in
+        viewModel.getViewStateObservable().subscribe { [weak self] viewStateEvent in
             DispatchQueue.main.async {
                 switch viewStateEvent {
                 case let .next(event):

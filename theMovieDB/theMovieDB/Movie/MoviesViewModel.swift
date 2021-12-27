@@ -29,6 +29,8 @@ final class MoviesViewModel: MoviesViewModelType {
     private let viewStateRelay = PublishRelay<MoviesViewState>()
     private let dependencies: Dependencies
     
+    private let dispatchQueue = DispatchQueue(label: "theMovieDB.synchronizeWritingEvents", attributes: .concurrent, target: .main)
+    
     init(dependencies: Dependencies = .init()) {
         self.dependencies = dependencies
     }
@@ -50,10 +52,13 @@ private extension MoviesViewModel {
     func getPopularMovies() {
         dependencies
             .getPopularMoviesInteractor
-            .execute(params: MovieParams(page: 1)) { result in
+            .execute(params: MovieParams(page: 1)) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case let .success(popularMovies):
-                    self.viewStateRelay.accept(.showShows(.popularMovies, popularMovies.map { $0.show }))
+                    self.dispatchQueue.async(flags: .barrier) {
+                        self.viewStateRelay.accept(.showShows(.popularMovies, popularMovies.map { $0.show }))
+                    }
                 case let .failure(error):
                     print(error)
                 }
@@ -63,10 +68,13 @@ private extension MoviesViewModel {
     func getTopRatedMovies() {
         dependencies
             .getTopRatedMoviesInteractor
-            .execute(params: MovieParams(page: 1)) { result in
+            .execute(params: MovieParams(page: 1)) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case let .success(topRatedMovies):
-                    self.viewStateRelay.accept(.showShows(.topRatedMovies, topRatedMovies.map { $0.show }))
+                    self.dispatchQueue.async(flags: .barrier) {
+                        self.viewStateRelay.accept(.showShows(.topRatedMovies, topRatedMovies.map { $0.show }))
+                    }
                 case let .failure(error):
                     print(error)
                 }
@@ -76,10 +84,13 @@ private extension MoviesViewModel {
     func getUpcomingMovies() {
         dependencies
             .getUpcomingMoviesInteractor
-            .execute(params: MovieParams(page: 1)) { result in
+            .execute(params: MovieParams(page: 1)) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case let .success(topRatedMovies):
-                    self.viewStateRelay.accept(.showShows(.upcomingMovies, topRatedMovies.map { $0.show }))
+                    self.dispatchQueue.async(flags: .barrier) {
+                        self.viewStateRelay.accept(.showShows(.upcomingMovies, topRatedMovies.map { $0.show }))
+                    }
                 case let .failure(error):
                     print(error)
                 }
@@ -89,10 +100,13 @@ private extension MoviesViewModel {
     func getPopularTVShows() {
         dependencies
             .getPopularTVShowsInteractor
-            .execute(params: TVShowParams(page: 1)) { result in
+            .execute(params: TVShowParams(page: 1)) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case let .success(popularTVShows):
-                    self.viewStateRelay.accept(.showShows(.popularTVShows, popularTVShows.map { $0.show }))
+                    self.dispatchQueue.async(flags: .barrier) {
+                        self.viewStateRelay.accept(.showShows(.popularTVShows, popularTVShows.map { $0.show }))
+                    }
                 case let .failure(error):
                     print(error)
                 }
@@ -102,10 +116,13 @@ private extension MoviesViewModel {
     func getTopRatedTVShows() {
         dependencies
             .getTopRatedTVShowsInteractor
-            .execute(params: TVShowParams(page: 1)) { result in
+            .execute(params: TVShowParams(page: 1)) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case let .success(topRatedTVShows):
-                    self.viewStateRelay.accept(.showShows(.topRatedTVShows, topRatedTVShows.map { $0.show }))
+                    self.dispatchQueue.async(flags: .barrier) {
+                        self.viewStateRelay.accept(.showShows(.topRatedTVShows, topRatedTVShows.map { $0.show }))
+                    }
                 case let .failure(error):
                     print(error)
                 }
