@@ -16,7 +16,7 @@ final class TVShowRemoteDataSource: TVShowRemoteDataSourceType {
     
     private let client: HTTPClientType
     
-    init(client: HTTPClientType) {
+    init(client: HTTPClientType = HTTPClient()) {
         self.client = client
     }
     

@@ -21,6 +21,7 @@
 		D182C73B2777032600C8303A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D182C7322777032600C8303A /* Domain.framework */; };
 		D182C7402777032600C8303A /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D182C73F2777032600C8303A /* DomainTests.swift */; };
 		D182C7412777032600C8303A /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = D182C7352777032600C8303A /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1C36D4E27798C0900207A1B /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D4D27798C0900207A1B /* Show.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		D182C7352777032600C8303A /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		D182C73A2777032600C8303A /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D182C73F2777032600C8303A /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		D1C36D4D27798C0900207A1B /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		D303E54E989DBF97F6E610F6 /* Pods-theMovieDB-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMovieDB-Domain.release.xcconfig"; path = "Target Support Files/Pods-theMovieDB-Domain/Pods-theMovieDB-Domain.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +215,7 @@
 				D17E65CD2777A705006F68D8 /* TVShow */,
 				D182C7352777032600C8303A /* Domain.h */,
 				D154310E2777D5D80015998C /* Interactor.swift */,
+				D1C36D4D27798C0900207A1B /* Show.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				D15431062777BD5D0015998C /* TVShowRepositoryType.swift in Sources */,
 				D15431152777E8E20015998C /* GetPopularTVShowsInteractor.swift in Sources */,
 				D154310D2777D33F0015998C /* GetPopularMoviesInteractor.swift in Sources */,
+				D1C36D4E27798C0900207A1B /* Show.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

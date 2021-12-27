@@ -35,14 +35,14 @@ public struct APIMovie: Codable {
 }
 
 // MARK: Mapping into Domain Object
-extension APIMovie {
-    public var movie: Movie {
+public extension APIMovie {
+    var movie: Movie {
         return Movie(
             id: id,
             title: title, 
             releaseDate: releaseDate, 
             voteAverage: "\(voteAverage)", 
-            imageURL: posterPath ?? ""
+            imageURL: "\(NetworkConstants.imageURL)\(posterPath ?? "")" 
         )
     }
 }

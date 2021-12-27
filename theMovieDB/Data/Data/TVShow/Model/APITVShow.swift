@@ -19,10 +19,6 @@ public struct APITVShow: Codable {
     public let genreIDs: [Int]
     public let originalLanguage: String
     
-    public var tvShow: TVShow {
-        return TVShow()
-    }
-    
     private enum CodingKeys: String, CodingKey {
         case id, name
         case firstAirDate = "first_air_date"
@@ -33,5 +29,18 @@ public struct APITVShow: Codable {
         case originCountry = "origin_country"
         case genreIDs = "genre_ids"
         case originalLanguage = "original_language"
+    }
+}
+
+// MARK: Mapping into Domain Object
+public extension APITVShow {
+    var tvShow: TVShow {
+        return TVShow(
+            id: id, 
+            title: name, 
+            firstAirDate: firstAirDate, 
+            voteAverage: "\(voteAverage)", 
+            imageURL: "\(NetworkConstants.imageURL)\(posterPath ?? "")"
+        )
     }
 }

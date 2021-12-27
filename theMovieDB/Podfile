@@ -15,12 +15,17 @@ def dataPods
   pod 'Alamofire', '5.5.0'
 end
 
+def appPods
+  dataPods
+  commonPods
+  pod 'Kingfisher', '~> 7.0'
+end
+
 # Defining Pods for the modules
 target 'theMovieDB' do
   
   # Pods for theMovieDB
-  commonPods
-  dataPods
+  appPods
 
   target 'Data' do
     project 'Data/Data'

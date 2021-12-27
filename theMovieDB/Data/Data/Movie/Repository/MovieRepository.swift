@@ -15,7 +15,7 @@ final class MovieRepository: MovieRepositoryType {
         self.remoteDataSource = remoteDataSource
     }
     
-    func getPopularMovies(params: MovieParams) -> Single<[Movie]> { // TODO: How to avoid nested maps if we can
+    func getPopularMovies(params: MovieParams) -> Single<[Movie]> {
         return remoteDataSource
             .getPopularMovies(endpoint: MoviesEndpoints.popular(params))
             .map { $0.results.map { $0.movie } }

@@ -20,3 +20,12 @@ public struct Movie {
         self.imageURL = imageURL
     }
 }
+
+public extension Movie {
+    var show: Show {
+        return Show(
+            id: id, 
+            imageURL: imageURL
+        )
+    }
+}
