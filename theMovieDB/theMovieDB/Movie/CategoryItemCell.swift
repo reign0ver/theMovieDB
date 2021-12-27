@@ -8,13 +8,11 @@
 import UIKit
 import Domain
 
-final class CategoryItemCell: UITableViewCell {
-    static let reuseIdentifier = String(describing: CategoryItemCell.self)
-    
+final class CategoryItemCell: UITableViewCell, ReusableIdentifier {
     private var collectionView: UICollectionView!
     private var categoryNameLabel: UILabel!
     
-    var items = [Show]()
+    private var items = [Show]()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -104,10 +102,7 @@ extension CategoryItemCell: UICollectionViewDelegate, UICollectionViewDataSource
     }
 }
 
-class ItemCollectionViewCell: UICollectionViewCell {
-    
-    static let reuseIdentifier = String(describing: ItemCollectionViewCell.self)
-    
+final class ItemCollectionViewCell: UICollectionViewCell, ReusableIdentifier {
     var imageURL: String? {
         didSet {
             posterImageView.setImage(from: imageURL ?? "")
