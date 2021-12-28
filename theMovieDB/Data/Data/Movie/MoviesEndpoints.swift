@@ -9,9 +9,9 @@ import Alamofire
 import Domain
 
 enum MoviesEndpoints: EndpointType {
-    case popular(MovieParams)
-    case topRated(MovieParams)
-    case upcoming(MovieParams)
+    case popular(ShowParams)
+    case topRated(ShowParams)
+    case upcoming(ShowParams)
     case detail(id: Int)
     
     var path: String {

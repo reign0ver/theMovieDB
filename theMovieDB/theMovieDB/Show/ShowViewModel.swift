@@ -12,8 +12,8 @@ import RxRelay
 
 final class ShowViewModel: ShowViewModelType {
     private let disposeBag = DisposeBag()
-    private let viewStateRelay = PublishRelay<ShowViewState>()
     private let dependencies: Dependencies
+    private let viewStateRelay = PublishRelay<ShowViewState>()
     
     private let dispatchQueue = DispatchQueue(label: "theMovieDB.synchronizeWritingEvents", attributes: .concurrent, target: .main)
     
@@ -38,7 +38,7 @@ private extension ShowViewModel {
     func getPopularMovies() {
         dependencies
             .getPopularMoviesInteractor
-            .execute(params: MovieParams(page: 1)) { [weak self] result in
+            .execute(params: ShowParams(page: 1)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case let .success(popularMovies):
@@ -54,7 +54,7 @@ private extension ShowViewModel {
     func getTopRatedMovies() {
         dependencies
             .getTopRatedMoviesInteractor
-            .execute(params: MovieParams(page: 1)) { [weak self] result in
+            .execute(params: ShowParams(page: 1)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case let .success(topRatedMovies):
@@ -70,7 +70,7 @@ private extension ShowViewModel {
     func getUpcomingMovies() {
         dependencies
             .getUpcomingMoviesInteractor
-            .execute(params: MovieParams(page: 1)) { [weak self] result in
+            .execute(params: ShowParams(page: 1)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case let .success(topRatedMovies):
@@ -86,7 +86,7 @@ private extension ShowViewModel {
     func getPopularTVShows() {
         dependencies
             .getPopularTVShowsInteractor
-            .execute(params: TVShowParams(page: 1)) { [weak self] result in
+            .execute(params: ShowParams(page: 1)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case let .success(popularTVShows):
@@ -102,7 +102,7 @@ private extension ShowViewModel {
     func getTopRatedTVShows() {
         dependencies
             .getTopRatedTVShowsInteractor
-            .execute(params: TVShowParams(page: 1)) { [weak self] result in
+            .execute(params: ShowParams(page: 1)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case let .success(topRatedTVShows):
@@ -118,18 +118,18 @@ private extension ShowViewModel {
 
 extension ShowViewModel {
     struct Dependencies {
-        let getPopularMoviesInteractor: SingleInteractor<MovieParams, [Movie]>
-        let getTopRatedMoviesInteractor: SingleInteractor<MovieParams, [Movie]>
-        let getUpcomingMoviesInteractor: SingleInteractor<MovieParams, [Movie]>
+        let getPopularMoviesInteractor: SingleInteractor<ShowParams, [Movie]>
+        let getTopRatedMoviesInteractor: SingleInteractor<ShowParams, [Movie]>
+        let getUpcomingMoviesInteractor: SingleInteractor<ShowParams, [Movie]>
         
-        let getPopularTVShowsInteractor: SingleInteractor<TVShowParams, [TVShow]>
-        let getTopRatedTVShowsInteractor: SingleInteractor<TVShowParams, [TVShow]>
+        let getPopularTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]>
+        let getTopRatedTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]>
         
-        init(_ getPopularMoviesInteractor: SingleInteractor<MovieParams, [Movie]> = GetPopularMoviesInteractor(movieRepository),
-             _ getTopRatedMoviesInteractor: SingleInteractor<MovieParams, [Movie]> = GetTopRatedMoviesInteractor(movieRepository),
-             _ getUpcomingMoviesInteractor: SingleInteractor<MovieParams, [Movie]> = GetUpcomingMoviesInteractor(movieRepository),
-             _ getPopularTVShowsInteractor: SingleInteractor<TVShowParams, [TVShow]> = GetPopularTVShowsInteractor(tvShowsRepository: tvShowRepository),
-             _ getTopRatedTVShowsInteractor: SingleInteractor<TVShowParams, [TVShow]> = GetTopRatedTVShowsInteractor(tvShowsRepository: tvShowRepository)) {
+        init(_ getPopularMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = GetPopularMoviesInteractor(movieRepository),
+             _ getTopRatedMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = GetTopRatedMoviesInteractor(movieRepository),
+             _ getUpcomingMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = GetUpcomingMoviesInteractor(movieRepository),
+             _ getPopularTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> = GetPopularTVShowsInteractor(tvShowRepository),
+             _ getTopRatedTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> = GetTopRatedTVShowsInteractor(tvShowRepository)) {
             self.getPopularMoviesInteractor = getPopularMoviesInteractor
             self.getTopRatedMoviesInteractor = getTopRatedMoviesInteractor
             self.getUpcomingMoviesInteractor = getUpcomingMoviesInteractor

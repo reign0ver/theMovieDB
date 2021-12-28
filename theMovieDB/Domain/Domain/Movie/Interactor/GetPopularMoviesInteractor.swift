@@ -7,23 +7,14 @@
 
 import RxSwift
 
-public final class GetPopularMoviesInteractor: SingleInteractor<MovieParams, [Movie]> {
+public final class GetPopularMoviesInteractor: SingleInteractor<ShowParams, [Movie]> {
     private let moviesRepository: MovieRepositoryType
     
     public init(_ moviesRepository: MovieRepositoryType) {
         self.moviesRepository = moviesRepository
     }
     
-    public override func buildUseCase(params: MovieParams) -> Single<[Movie]> {
+    public override func buildUseCase(params: ShowParams) -> Single<[Movie]> {
         return moviesRepository.getPopularMovies(params: params)
-    }
-}
-
-// TODO: Check if is the same for every category
-public struct MovieParams {
-    public let page: Int
-    
-    public init(page: Int) {
-        self.page = page
     }
 }

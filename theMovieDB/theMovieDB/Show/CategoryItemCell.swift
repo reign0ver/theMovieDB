@@ -8,11 +8,17 @@
 import UIKit
 import Domain
 
+protocol CategoryItemCellDelegate: AnyObject {
+    func didTapOnShow(_ category: ShowCategory, _ id: Int)
+}
+
 final class CategoryItemCell: UITableViewCell, ReusableIdentifier {
     private var collectionView: UICollectionView!
     private var categoryNameLabel: UILabel!
     
     private var items = [Show]()
+    private var itemsCategory: ShowCategory = .popularMovies
+    weak var delegate: CategoryItemCellDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -29,6 +35,7 @@ final class CategoryItemCell: UITableViewCell, ReusableIdentifier {
     
     func configureCell(with show: [Show], category: ShowCategory) {
         items = show
+        itemsCategory = category
         categoryNameLabel.text = "\(category.name)"
         collectionView.reloadData()
     }
@@ -85,7 +92,9 @@ extension CategoryItemCell: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Select show with ID: \(items[indexPath.row].id)")
+        let id = items[indexPath.row].id
+        print("Select show with ID: \(id)")
+        delegate?.didTapOnShow(itemsCategory, id)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

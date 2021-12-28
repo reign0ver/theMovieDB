@@ -5,6 +5,8 @@
 //  Created by Andres Enrique Carrillo Miranda on 27/12/21.
 //
 
+import Domain
+
 public struct APITVShowDetail: Codable {
     public let name: String
     public let firstAirDate: String
@@ -20,5 +22,18 @@ public struct APITVShowDetail: Codable {
         case backdropPath = "backdrop_path"
         case voteAverage = "vote_average"
         case genres
+    }
+}
+
+public extension APITVShowDetail {
+    var tvShowDetail: ShowDetail {
+        return TVShowDetail(
+            title: name, 
+            releaseDate: firstAirDate, 
+            overview: overview, 
+            imageURL: "\(NetworkConstants.imageURL)\(backdropPath ?? "")", 
+            voteAverage: "\(voteAverage)", 
+            genres: genres.map { $0.name }
+        )
     }
 }

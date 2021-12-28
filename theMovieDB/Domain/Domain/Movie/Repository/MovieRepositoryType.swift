@@ -8,8 +8,8 @@
 import RxSwift
 
 public protocol MovieRepositoryType {
-    func getPopularMovies(params: MovieParams) -> Single<[Movie]>
-    func getTopRatedMovies(params: MovieParams) -> Single<[Movie]>
-    func getUpcomingMovies(params: MovieParams) -> Single<[Movie]>
-    func getMovieDetail() -> Single<ShowDetail>
+    func getPopularMovies(params: ShowParams) -> Single<[Movie]>
+    func getTopRatedMovies(params: ShowParams) -> Single<[Movie]>
+    func getUpcomingMovies(params: ShowParams) -> Single<[Movie]>
+    func getMovieDetail(params: ShowDetailParams) -> Single<ShowDetail>
 }

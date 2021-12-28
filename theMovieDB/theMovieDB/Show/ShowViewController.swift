@@ -14,9 +14,9 @@ final class ShowViewController: UITableViewController {
     private let disposeBag = DisposeBag()
     private var dataSource = [(category: ShowCategory, shows: [Show])]() // we can maybe move this dataSource?
     
-    weak var coordinator: ShowCoordinator?
+    weak var coordinator: ShowItemsFlow?
     
-    init(_ viewModel: ShowViewModelType = ShowViewModel()) {
+    init(_ viewModel: ShowViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -94,7 +94,14 @@ extension ShowViewController {
         
         let currentItem = dataSource[indexPath.row]
         cell.configureCell(with: currentItem.shows, category: currentItem.category)
+        cell.delegate = self
         
         return cell
+    }
+}
+
+extension ShowViewController: CategoryItemCellDelegate {
+    func didTapOnShow(_ category: ShowCategory, _ id: Int) {
+        coordinator?.showDetail(category, id)
     }
 }

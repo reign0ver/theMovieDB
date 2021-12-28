@@ -7,14 +7,14 @@
 
 import RxSwift
 
-public final class GetUpcomingMoviesInteractor: SingleInteractor<MovieParams, [Movie]> {
+public final class GetUpcomingMoviesInteractor: SingleInteractor<ShowParams, [Movie]> {
     private let moviesRepository: MovieRepositoryType
     
     public init(_ moviesRepository: MovieRepositoryType) {
         self.moviesRepository = moviesRepository
     }
     
-    public override func buildUseCase(params: MovieParams) -> Single<[Movie]> {
+    public override func buildUseCase(params: ShowParams) -> Single<[Movie]> {
         return moviesRepository.getUpcomingMovies(params: params)
     }
 }

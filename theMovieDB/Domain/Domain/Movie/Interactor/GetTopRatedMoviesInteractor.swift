@@ -7,14 +7,14 @@
 
 import RxSwift
 
-public final class GetTopRatedMoviesInteractor: SingleInteractor<MovieParams, [Movie]> {
+public final class GetTopRatedMoviesInteractor: SingleInteractor<ShowParams, [Movie]> {
     private let moviesRepository: MovieRepositoryType
     
     public init(_ moviesRepository: MovieRepositoryType) {
         self.moviesRepository = moviesRepository
     }
     
-    public override func buildUseCase(params: MovieParams) -> Single<[Movie]> {
+    public override func buildUseCase(params: ShowParams) -> Single<[Movie]> {
         return moviesRepository.getTopRatedMovies(params: params)
     }
 }

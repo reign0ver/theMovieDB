@@ -36,4 +36,17 @@ public enum ShowCategory {
             return "Top Rated TV Shows"
         }
     }
+    
+    public var isMovie: Bool {
+        switch self {
+        case .popularMovies, .topRatedMovies, .upcomingMovies:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    public var isTVShow: Bool {
+        return !isMovie
+    }
 }

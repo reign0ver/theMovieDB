@@ -7,24 +7,14 @@
 
 import RxSwift
 
-public final class GetPopularTVShowsInteractor: SingleInteractor<TVShowParams, [TVShow]> {
+public final class GetPopularTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> {
     private let tvShowsRepository: TVShowRepositoryType
     
-    public init(tvShowsRepository: TVShowRepositoryType) {
+    public init(_ tvShowsRepository: TVShowRepositoryType) {
         self.tvShowsRepository = tvShowsRepository
     }
     
-    public override func buildUseCase(params: TVShowParams) -> Single<[TVShow]> {
+    public override func buildUseCase(params: ShowParams) -> Single<[TVShow]> {
         return tvShowsRepository.getPopularTVShows(params: params)
     }
 }
-
-// TODO: Check if is the same for every category
-public struct TVShowParams {
-    public let page: Int
-    
-    public init(page: Int) {
-        self.page = page
-    }
-}
-

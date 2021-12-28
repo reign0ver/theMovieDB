@@ -9,8 +9,8 @@ import Alamofire
 import Domain
 
 enum TVShowEndpoints: EndpointType {
-    case popular(TVShowParams)
-    case topRated(TVShowParams)
+    case popular(ShowParams)
+    case topRated(ShowParams)
     case detail(id: Int)
     
     var path: String {

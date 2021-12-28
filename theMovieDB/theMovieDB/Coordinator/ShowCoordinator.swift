@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import Domain
 
-final class ShowCoordinator: Coordinator {
+protocol ShowItemsFlow: AnyObject {
+    func showDetail(_ showType: ShowCategory, _ showId: Int)
+}
+
+final class ShowCoordinator: Coordinator, ShowItemsFlow {
     var navigationController: UINavigationController
     
     init(_ navController: UINavigationController) {
@@ -15,8 +20,14 @@ final class ShowCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = ShowViewController()
+        let viewModel = ShowViewModel()
+        let vc = ShowViewController(viewModel)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showDetail(_ showType: ShowCategory, _ showId: Int) {
+        let detailCoordinator = ShowDetailCoordinator(navController: navigationController, params: (showType, showId))
+        coordinate(to: detailCoordinator)
     }
 }

@@ -7,14 +7,14 @@
 
 import RxSwift
 
-public final class GetTopRatedTVShowsInteractor: SingleInteractor<TVShowParams, [TVShow]> {
+public final class GetTopRatedTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> {
     private let tvShowsRepository: TVShowRepositoryType
     
-    public init(tvShowsRepository: TVShowRepositoryType) {
+    public init(_ tvShowsRepository: TVShowRepositoryType) {
         self.tvShowsRepository = tvShowsRepository
     }
     
-    public override func buildUseCase(params: TVShowParams) -> Single<[TVShow]> {
+    public override func buildUseCase(params: ShowParams) -> Single<[TVShow]> {
         return tvShowsRepository.getTopRatedTVShows(params: params)
     }
 }

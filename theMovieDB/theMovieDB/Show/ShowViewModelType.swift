@@ -10,7 +10,6 @@ import RxSwift
 
 protocol ShowViewModelType {
     func getViewStateObservable() -> Observable<ShowViewState>
-    
     func getShows()
 }
 

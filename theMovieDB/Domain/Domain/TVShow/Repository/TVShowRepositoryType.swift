@@ -8,6 +8,7 @@
 import RxSwift
 
 public protocol TVShowRepositoryType {
-    func getPopularTVShows(params: TVShowParams) -> Single<[TVShow]>
-    func getTopRatedTVShows(params: TVShowParams) -> Single<[TVShow]>
+    func getPopularTVShows(params: ShowParams) -> Single<[TVShow]>
+    func getTopRatedTVShows(params: ShowParams) -> Single<[TVShow]>
+    func getTVShowDetail(params: ShowDetailParams) -> Single<ShowDetail>
 }

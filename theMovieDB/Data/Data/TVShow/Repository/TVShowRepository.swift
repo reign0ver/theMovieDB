@@ -15,16 +15,22 @@ final class TVShowRepository: TVShowRepositoryType {
         self.remoteDataSource = remoteDataSource
     }
     
-    func getPopularTVShows(params: TVShowParams) -> Single<[TVShow]> {
+    func getPopularTVShows(params: ShowParams) -> Single<[TVShow]> {
         return remoteDataSource
             .getPopularTVShows(endpoint: TVShowEndpoints.popular(params))
             .map { $0.results.map { $0.tvShow } }
     }
     
-    func getTopRatedTVShows(params: TVShowParams) -> Single<[TVShow]> {
+    func getTopRatedTVShows(params: ShowParams) -> Single<[TVShow]> {
         return remoteDataSource
             .getTopRatedTVShows(endpoint: TVShowEndpoints.topRated(params))
             .map { $0.results.map { $0.tvShow } }
+    }
+    
+    func getTVShowDetail(params: ShowDetailParams) -> Single<ShowDetail> {
+        return remoteDataSource
+            .getTVShowDetail(endpoint: TVShowEndpoints.detail(id: params.showId))
+            .map { $0.tvShowDetail }
     }
 }
 

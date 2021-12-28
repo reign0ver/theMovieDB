@@ -6,11 +6,31 @@
 //
 
 import UIKit
+import RxSwift
 
 final class ShowDetailViewController: UITableViewController {
-
+    private let viewModel: ShowDetailViewModelType
+    private let disposeBag = DisposeBag()
+    
+    init(_ viewModel: ShowDetailViewModelType) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBinding()
+        viewModel.getShowDetail()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupTableView()
+        view.backgroundColor = .appWhite
     }
 }
 
@@ -19,6 +39,32 @@ private extension ShowDetailViewController {
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
         tableView.register(ShowDetailCell.self, forCellReuseIdentifier: ShowDetailCell.reuseIdentifier)
+    }
+    
+    func setupBinding() {
+        viewModel.getViewStateObservable().subscribe { [weak self] viewStateEvent in
+            DispatchQueue.main.async {
+                switch viewStateEvent {
+                case let .next(event):
+                    self?.handleViewState(event)
+                case .error, .completed:
+                    break
+                }
+            }
+        }.disposed(by: disposeBag)
+    }
+    
+    func handleViewState(_ newViewState: ShowDetailViewState) {
+        switch newViewState {
+        case let .showDetail(showDetail):
+            break
+        case .showError:
+            break
+        case .showLoading:
+            break
+        case .hideLoading:
+            break
+        }
     }
 }
 
