@@ -5,6 +5,8 @@
 //  Created by Andres Enrique Carrillo Miranda on 27/12/21.
 //
 
+import Domain
+
 public struct APIMovieDetail: Codable {
     public let title: String
     public let releaseDate: String
@@ -25,4 +27,17 @@ public struct APIMovieDetail: Codable {
 
 public struct APIGenre: Codable {
     public let name: String
+}
+
+public extension APIMovieDetail {
+    var movieDetail: ShowDetail {
+        return MovieDetail(
+            title: title, 
+            releaseDate: releaseDate, 
+            overview: overview, 
+            imageURL: "\(NetworkConstants.imageURL)\(backdropPath ?? "")", 
+            voteAverage: "\(voteAverage)", 
+            genres: genres.map { $0.name }
+        )
+    }
 }

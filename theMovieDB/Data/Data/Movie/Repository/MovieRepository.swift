@@ -32,6 +32,12 @@ final class MovieRepository: MovieRepositoryType {
             .getPopularMovies(endpoint: MoviesEndpoints.upcoming(params))
             .map { $0.results.map { $0.movie } }
     }
+    
+    func getMovieDetail() -> Single<ShowDetail> {
+        return remoteDataSource
+            .getMovieDetail(endpoint: MoviesEndpoints.detail(id: 0))
+            .map { $0.movieDetail }
+    }
 }
 
 public let movieRepository: MovieRepositoryType = MovieRepository()
