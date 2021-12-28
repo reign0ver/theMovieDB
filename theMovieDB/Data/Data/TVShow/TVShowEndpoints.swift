@@ -1,5 +1,5 @@
 //
-//  MoviesEndpoints.swift
+//  TVShowEndpoints.swift
 //  theMovieDB
 //
 //  Created by Andres Enrique Carrillo Miranda on 23/12/21.
@@ -8,25 +8,25 @@
 import Alamofire
 import Domain
 
-enum MoviesEndpoints: EndpointType {
-    case popular(MovieParams)
-    case topRated(MovieParams)
-    case upcoming(MovieParams)
+enum TVShowEndpoints: EndpointType {
+    case popular(TVShowParams)
+    case topRated(TVShowParams)
+    case detail(id: Int)
     
     var path: String {
         switch self {
         case .popular:
-            return "/movie/popular"
+            return "/tv/popular"
         case .topRated:
-            return "/movie/top_rated"
-        case .upcoming:
-            return "/movie/upcoming"
+            return "/tv/top_rated"
+        case let .detail(id):
+            return "/tv/\(id)"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .popular, .topRated, .upcoming:
+        case .popular, .topRated, .detail:
             return .get
         }
     }
@@ -35,9 +35,10 @@ enum MoviesEndpoints: EndpointType {
         var params = ["api_key": NetworkConstants.apiKey]
         switch self {
         case let .popular(movieParams),
-             let .topRated(movieParams),
-             let .upcoming(movieParams):
+             let .topRated(movieParams):
             params["page"] = "\(movieParams.page)"
+        case .detail: 
+            break
         }
         
         return params

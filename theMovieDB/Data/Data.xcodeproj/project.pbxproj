@@ -162,8 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				D17E65C32777A628006F68D8 /* EndpointType.swift */,
-				D17E65C52777A629006F68D8 /* MoviesEndpoints.swift */,
-				D17E65C42777A629006F68D8 /* TVShowEndpoints.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -173,6 +171,7 @@
 			children = (
 				D17E65CB2777A6D5006F68D8 /* Repository */,
 				D17E65CC2777A6E0006F68D8 /* Model */,
+				D17E65C52777A629006F68D8 /* MoviesEndpoints.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -199,6 +198,7 @@
 			children = (
 				D17E65D02777A762006F68D8 /* Repository */,
 				D17E65D22777A76C006F68D8 /* Model */,
+				D17E65C42777A629006F68D8 /* TVShowEndpoints.swift */,
 			);
 			path = TVShow;
 			sourceTree = "<group>";
