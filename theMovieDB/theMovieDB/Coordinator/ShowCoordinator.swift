@@ -1,5 +1,5 @@
 //
-//  MovieCoordinator.swift
+//  ShowCoordinator.swift
 //  theMovieDB
 //
 //  Created by Andres Enrique Carrillo Miranda on 26/12/21.
@@ -7,8 +7,7 @@
 
 import UIKit
 
-final class MovieCoordinator: Coordinator {
-    
+final class ShowCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     init(_ navController: UINavigationController) {
@@ -16,7 +15,7 @@ final class MovieCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = MoviesViewController()
+        let vc = ShowViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }

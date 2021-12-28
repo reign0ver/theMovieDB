@@ -1,5 +1,5 @@
 //
-//  MoviesViewController.swift
+//  ShowViewController.swift
 //  theMovieDB
 //
 //  Created by Andres Enrique Carrillo Miranda on 26/12/21.
@@ -9,16 +9,14 @@ import UIKit
 import Domain
 import RxSwift
 
-final class MoviesViewController: UITableViewController {
-    
-    private let viewModel: MoviesViewModelType
-    weak var coordinator: MovieCoordinator?
-    
+final class ShowViewController: UITableViewController {
+    private let viewModel: ShowViewModelType
     private let disposeBag = DisposeBag()
-    
     private var dataSource = [(category: ShowCategory, shows: [Show])]() // we can maybe move this dataSource?
     
-    init(_ viewModel: MoviesViewModelType = MoviesViewModel()) {
+    weak var coordinator: ShowCoordinator?
+    
+    init(_ viewModel: ShowViewModelType = ShowViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,12 +34,12 @@ final class MoviesViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationBar()
-        view.backgroundColor = .appWhite
         setupTableView()
+        view.backgroundColor = .appWhite
     }
 }
 
-private extension MoviesViewController {
+private extension ShowViewController {
     func setupNavigationBar() {
         navigationItem.title = "theMovieDB"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -66,7 +64,7 @@ private extension MoviesViewController {
         }.disposed(by: disposeBag)
     }
     
-    func handleViewState(_ newViewState: MoviesViewState) {
+    func handleViewState(_ newViewState: ShowViewState) {
         switch newViewState {
         case let .showShows(category, shows):
             dataSource.append((category, shows))
@@ -84,7 +82,7 @@ private extension MoviesViewController {
 }
 
 // MARK: - TableView Delegate and DataSource
-extension MoviesViewController {
+extension ShowViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }

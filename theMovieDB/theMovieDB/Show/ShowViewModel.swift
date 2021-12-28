@@ -1,32 +1,18 @@
 //
-//  MoviesViewModel.swift
+//  ShowViewModel.swift
 //  theMovieDB
 //
 //  Created by Andres Enrique Carrillo Miranda on 26/12/21.
 //
 
+import Data
+import Domain
 import RxSwift
 import RxRelay
-import Domain
-import Data
 
-protocol MoviesViewModelType {
-    func getViewStateObservable() -> Observable<MoviesViewState>
-    
-    func getShows()
-}
-
-enum MoviesViewState {
-    case showShows(ShowCategory, [Show])
-    case showError
-    case showLoading
-    case hideLoading
-}
-
-
-final class MoviesViewModel: MoviesViewModelType {
+final class ShowViewModel: ShowViewModelType {
     private let disposeBag = DisposeBag()
-    private let viewStateRelay = PublishRelay<MoviesViewState>()
+    private let viewStateRelay = PublishRelay<ShowViewState>()
     private let dependencies: Dependencies
     
     private let dispatchQueue = DispatchQueue(label: "theMovieDB.synchronizeWritingEvents", attributes: .concurrent, target: .main)
@@ -35,7 +21,7 @@ final class MoviesViewModel: MoviesViewModelType {
         self.dependencies = dependencies
     }
     
-    func getViewStateObservable() -> Observable<MoviesViewState> {
+    func getViewStateObservable() -> Observable<ShowViewState> {
         return viewStateRelay.asObservable()
     }
     
@@ -48,7 +34,7 @@ final class MoviesViewModel: MoviesViewModelType {
     }
 }
 
-private extension MoviesViewModel {
+private extension ShowViewModel {
     func getPopularMovies() {
         dependencies
             .getPopularMoviesInteractor
@@ -130,7 +116,7 @@ private extension MoviesViewModel {
     }
 }
 
-extension MoviesViewModel {
+extension ShowViewModel {
     struct Dependencies {
         let getPopularMoviesInteractor: SingleInteractor<MovieParams, [Movie]>
         let getTopRatedMoviesInteractor: SingleInteractor<MovieParams, [Movie]>

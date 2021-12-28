@@ -12,12 +12,12 @@ final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     private let window: UIWindow
-    private let movieCoordinator: MovieCoordinator
+    private let showCoordinator: ShowCoordinator
     
     init(_ window: UIWindow) {
         self.window = window
         navigationController = UINavigationController()
-        movieCoordinator = MovieCoordinator(navigationController)
+        showCoordinator = ShowCoordinator(navigationController)
     }
     
     func start() {
@@ -27,6 +27,6 @@ final class AppCoordinator: Coordinator {
     }
     
     func startApp() {
-        coordinate(to: movieCoordinator)
+        coordinate(to: showCoordinator)
     }
 }

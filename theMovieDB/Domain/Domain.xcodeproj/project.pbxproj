@@ -128,15 +128,6 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
-		D17E6580277794C5006F68D8 /* MovieDetail */ = {
-			isa = PBXGroup;
-			children = (
-				D17E658427779636006F68D8 /* Interactor */,
-				D17E65832777962D006F68D8 /* Model */,
-			);
-			path = MovieDetail;
-			sourceTree = "<group>";
-		};
 		D17E6581277794D5006F68D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,20 +142,6 @@
 				D154310C2777D33F0015998C /* GetPopularMoviesInteractor.swift */,
 				D15431102777E61B0015998C /* GetTopRatedMoviesInteractor.swift */,
 				D15431122777E6B00015998C /* GetUpcomingMoviesInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		D17E65832777962D006F68D8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D17E658427779636006F68D8 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -211,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				D17E657F277794BC006F68D8 /* Movie */,
-				D17E6580277794C5006F68D8 /* MovieDetail */,
 				D17E65CD2777A705006F68D8 /* TVShow */,
 				D182C7352777032600C8303A /* Domain.h */,
 				D154310E2777D5D80015998C /* Interactor.swift */,
