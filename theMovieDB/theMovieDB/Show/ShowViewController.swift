@@ -42,7 +42,7 @@ final class ShowViewController: UITableViewController {
 private extension ShowViewController {
     func setupNavigationBar() {
         navigationItem.title = "theMovieDB"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
     }
     

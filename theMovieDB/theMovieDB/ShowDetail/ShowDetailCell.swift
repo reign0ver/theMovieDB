@@ -17,18 +17,21 @@ final class ShowDetailCell: UITableViewCell, ReusableIdentifier {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14, weight: .bold)
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
     private let releaseDateLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .left
         label.font = .systemFont(ofSize: 14, weight: .regular)
         return label
     }()
     
     private let overviewLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .left
         label.font = .systemFont(ofSize: 14, weight: .regular)
         label.numberOfLines = 0
         
@@ -37,6 +40,7 @@ final class ShowDetailCell: UITableViewCell, ReusableIdentifier {
     
     private let genresLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .left
         label.font = .italicSystemFont(ofSize: 14)
         label.numberOfLines = 0
         
@@ -85,8 +89,8 @@ private extension ShowDetailCell {
         
         containerStackView.addArrangedSubview(titleLabel)
         containerStackView.addArrangedSubview(releaseDateLabel)
-        containerStackView.addArrangedSubview(overviewLabel)
         containerStackView.addArrangedSubview(genresLabel)
+        containerStackView.addArrangedSubview(overviewLabel)
         
         let constraints = [
             containerStackView.topAnchor.constraint(equalTo: headerImageView.bottomAnchor, constant: 8),
