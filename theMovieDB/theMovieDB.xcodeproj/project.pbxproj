@@ -30,6 +30,7 @@
 		D1C36D4C2778FE8D00207A1B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D4B2778FE8D00207A1B /* UIImageView+Extensions.swift */; };
 		D1C36D50277A857500207A1B /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D4F277A857500207A1B /* ReusableIdentifier.swift */; };
 		D1C36D52277A8A9400207A1B /* ShowViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D51277A8A9400207A1B /* ShowViewModelType.swift */; };
+		D1C36D54277A8CCD00207A1B /* ShowItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D53277A8CCD00207A1B /* ShowItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		D1C36D4B2778FE8D00207A1B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		D1C36D4F277A857500207A1B /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		D1C36D51277A8A9400207A1B /* ShowViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModelType.swift; sourceTree = "<group>"; };
+		D1C36D53277A8CCD00207A1B /* ShowItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				D1C36D3B27785C5B00207A1B /* ShowListViewController.swift */,
 				D1C36D492778E37600207A1B /* CategoryItemCell.swift */,
 				D1C36D51277A8A9400207A1B /* ShowViewModelType.swift */,
+				D1C36D53277A8CCD00207A1B /* ShowItemCollectionViewCell.swift */,
 			);
 			path = Show;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				D1C36D3A27784BC400207A1B /* ShowViewModel.swift in Sources */,
 				D1C36D52277A8A9400207A1B /* ShowViewModelType.swift in Sources */,
 				D1C36D3C27785C5B00207A1B /* ShowListViewController.swift in Sources */,
+				D1C36D54277A8CCD00207A1B /* ShowItemCollectionViewCell.swift in Sources */,
 				D1C36D452778CF1900207A1B /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

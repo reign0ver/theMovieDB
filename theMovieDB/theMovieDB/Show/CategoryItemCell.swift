@@ -60,7 +60,7 @@ final class CategoryItemCell: UITableViewCell, ReusableIdentifier {
         collectionView.delegate = self
         collectionView.backgroundColor = .appWhite
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: ItemCollectionViewCell.reuseIdentifier)
+        collectionView.register(ShowItemCollectionViewCell.self, forCellWithReuseIdentifier: ShowItemCollectionViewCell.reuseIdentifier)
     }
     
     private func setupCollectionViewConstraints() {
@@ -89,7 +89,7 @@ extension CategoryItemCell: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.reuseIdentifier, for: indexPath) as? ItemCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowItemCollectionViewCell.reuseIdentifier, for: indexPath) as? ShowItemCollectionViewCell else {
             return UICollectionViewCell()
         }
         
@@ -99,45 +99,5 @@ extension CategoryItemCell: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.frame.width / 3), height: collectionView.frame.height)
-    }
-}
-
-final class ItemCollectionViewCell: UICollectionViewCell, ReusableIdentifier {
-    var imageURL: String? {
-        didSet {
-            posterImageView.setImage(from: imageURL ?? "")
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
-        contentView.backgroundColor = .appWhite
-        setupPosterImageViewConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private let posterImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 4
-        return imageView
-    }()
-    
-    private func setupPosterImageViewConstraints() {
-        contentView.addSubview(posterImageView)
-        posterImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let constraints = [
-            posterImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            posterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            posterImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            posterImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ]
-        
-        NSLayoutConstraint.activate(constraints)
     }
 }
