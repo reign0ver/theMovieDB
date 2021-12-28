@@ -67,11 +67,12 @@ final class ShowDetailCell: UITableViewCell, ReusableIdentifier {
     }
     
     func configureCell(_ showDetail: ShowDetail) {
+        let genresText = showDetail.genres.joined(separator: ", ")
+        let releaseYear = showDetail.releaseDate.components(separatedBy: "-").first
         headerImageView.setImage(from: showDetail.imageURL)
         titleLabel.text = showDetail.title
-        releaseDateLabel.text = showDetail.releaseDate
+        releaseDateLabel.text = releaseYear ?? showDetail.releaseDate
         overviewLabel.text = showDetail.overview
-        let genresText = showDetail.genres.joined(separator: ", ")
         genresLabel.text = genresText
     }
 }
