@@ -7,10 +7,12 @@
 
 import UIKit
 import RxSwift
+import Domain
 
 final class ShowDetailViewController: UITableViewController {
     private let viewModel: ShowDetailViewModelType
     private let disposeBag = DisposeBag()
+    private var showDetail: ShowDetail?
     
     init(_ viewModel: ShowDetailViewModelType) {
         self.viewModel = viewModel
@@ -29,12 +31,18 @@ final class ShowDetailViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavigationBar()
         setupTableView()
         view.backgroundColor = .appWhite
     }
 }
 
 private extension ShowDetailViewController {
+    func setupNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
     func setupTableView() {
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
@@ -57,7 +65,8 @@ private extension ShowDetailViewController {
     func handleViewState(_ newViewState: ShowDetailViewState) {
         switch newViewState {
         case let .showDetail(showDetail):
-            break
+            self.showDetail = showDetail
+            tableView.reloadData()
         case .showError:
             break
         case .showLoading:
@@ -70,11 +79,19 @@ private extension ShowDetailViewController {
 
 // MARK: TableView Delegate and DataSource
 extension ShowDetailViewController {
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ShowDetailCell.reuseIdentifier) as? ShowDetailCell else {
+            return UITableViewCell()
+        }
+        
+        if let showDetail = showDetail {
+            cell.configureCell(showDetail)
+        }
+        
+        return cell
     }
 }

@@ -46,7 +46,7 @@ private extension ShowDetailViewModel {
                 guard let self = self else { return }
                 switch result {
                 case let .success(movieDetail):
-                    print(movieDetail)
+                    self.viewStateRelay.accept(.showDetail(movieDetail))
                 case let .failure(error):
                     print(error)
                 }
@@ -59,8 +59,8 @@ private extension ShowDetailViewModel {
             .execute(params: ShowDetailParams(showId: id)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case let .success(movieDetail):
-                    print(movieDetail)
+                case let .success(tvShowDetail):
+                    self.viewStateRelay.accept(.showDetail(tvShowDetail))
                 case let .failure(error):
                     print(error)
                 }

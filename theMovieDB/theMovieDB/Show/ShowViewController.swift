@@ -43,6 +43,7 @@ private extension ShowViewController {
     func setupNavigationBar() {
         navigationItem.title = "theMovieDB"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     func setupTableView() {
@@ -72,10 +73,6 @@ private extension ShowViewController {
             tableView.insertRows(at: [IndexPath(row: self.dataSource.count - 1, section: 0)], with: .right)
             tableView.endUpdates()
         case .showError:
-            break
-        case .showLoading:
-            break
-        case .hideLoading:
             break
         }
     }

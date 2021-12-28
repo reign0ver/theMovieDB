@@ -36,6 +36,7 @@
 		D1C36D5A277AA2A800207A1B /* ShowDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D59277AA2A800207A1B /* ShowDetailViewModel.swift */; };
 		D1C36D70277AC7EE00207A1B /* ShowDetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D6F277AC7EE00207A1B /* ShowDetailViewModelType.swift */; };
 		D1C36D72277AD16100207A1B /* ShowDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D71277AD16100207A1B /* ShowDetailCoordinator.swift */; };
+		D1C36D74277AEE9500207A1B /* DefaultImageViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D73277AEE9500207A1B /* DefaultImageViewPlaceholder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		D1C36D59277AA2A800207A1B /* ShowDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewModel.swift; sourceTree = "<group>"; };
 		D1C36D6F277AC7EE00207A1B /* ShowDetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewModelType.swift; sourceTree = "<group>"; };
 		D1C36D71277AD16100207A1B /* ShowDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailCoordinator.swift; sourceTree = "<group>"; };
+		D1C36D73277AEE9500207A1B /* DefaultImageViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImageViewPlaceholder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				D1C36D442778CF1900207A1B /* UIColor+Extension.swift */,
 				D1C36D4B2778FE8D00207A1B /* UIImageView+Extensions.swift */,
 				D1C36D4F277A857500207A1B /* ReusableIdentifier.swift */,
+				D1C36D73277AEE9500207A1B /* DefaultImageViewPlaceholder.swift */,
 			);
 			path = theMovieDB;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				D1C36D3A27784BC400207A1B /* ShowViewModel.swift in Sources */,
 				D1C36D52277A8A9400207A1B /* ShowViewModelType.swift in Sources */,
 				D1C36D58277A9EE300207A1B /* ShowDetailCell.swift in Sources */,
+				D1C36D74277AEE9500207A1B /* DefaultImageViewPlaceholder.swift in Sources */,
 				D1C36D56277A9D4400207A1B /* ShowDetailViewController.swift in Sources */,
 				D1C36D3C27785C5B00207A1B /* ShowViewController.swift in Sources */,
 				D1C36D54277A8CCD00207A1B /* ShowItemCollectionViewCell.swift in Sources */,

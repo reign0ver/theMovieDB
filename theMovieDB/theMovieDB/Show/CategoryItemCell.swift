@@ -98,7 +98,8 @@ extension CategoryItemCell: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowItemCollectionViewCell.reuseIdentifier, for: indexPath) as? ShowItemCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowItemCollectionViewCell.reuseIdentifier, 
+                                                            for: indexPath) as? ShowItemCollectionViewCell else {
             return UICollectionViewCell()
         }
         

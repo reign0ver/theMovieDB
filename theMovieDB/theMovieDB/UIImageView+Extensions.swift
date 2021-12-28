@@ -14,10 +14,24 @@ extension UIImageView {
             return
         }
         
-        self.kf.indicatorType = .activity
-        self.kf.setImage(
+        let defaultPlaceholderView = DefaultImageViewPlaceholder()
+        
+        kf.indicatorType = .activity
+        kf.setImage(
             with: imageURL, 
+            placeholder: nil,
             options: [.scaleFactor(UIScreen.main.scale), .transition(.fade(0.25)), .cacheMemoryOnly]
-        )
+        ) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success: break
+            case .failure:
+                self.addSubview(defaultPlaceholderView)
+                defaultPlaceholderView.translatesAutoresizingMaskIntoConstraints = false
+                defaultPlaceholderView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+                defaultPlaceholderView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+                
+            }
+        }
     }
 }

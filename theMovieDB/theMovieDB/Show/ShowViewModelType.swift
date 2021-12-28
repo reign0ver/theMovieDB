@@ -16,6 +16,4 @@ protocol ShowViewModelType {
 enum ShowViewState {
     case showShows(ShowCategory, [Show])
     case showError
-    case showLoading
-    case hideLoading
 }
