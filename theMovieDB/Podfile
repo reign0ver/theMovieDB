@@ -23,24 +23,38 @@ end
 
 # Defining Pods for the modules
 target 'theMovieDB' do
-  
   # Pods for theMovieDB
   appPods
 
   target 'Data' do
     project 'Data/Data'
-    commonPods
-    dataPods
+    inherit! :search_paths
+#    commonPods
+#    dataPods
+    
+    target 'DataTests' do
+      inherit! :search_paths
+      appPods
+    end
+    
   end
 
   target 'Domain' do
     project 'Domain/Domain'
-    commonPods
+    inherit! :search_paths
+#    commonPods
+    
+    target 'DomainTests' do
+      inherit! :search_paths
+      appPods
+    end
+    
   end
-
+  
+  # Pods for testing
   target 'theMovieDBTests' do
     inherit! :search_paths
-    # Pods for testing
+    appPods
   end
 
 end
