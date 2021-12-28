@@ -30,10 +30,10 @@
 		D1C36D6A277ABBF700207A1B /* ShowParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D69277ABBF700207A1B /* ShowParams.swift */; };
 		D1C36D6C277AC45000207A1B /* GetTVShowDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D6B277AC45000207A1B /* GetTVShowDetailInteractor.swift */; };
 		D1C36D6E277AC5D600207A1B /* TVShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D6D277AC5D600207A1B /* TVShowDetail.swift */; };
-		D1C36D77277B80C000207A1B /* SingleInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D76277B80C000207A1B /* SingleInteractorStub.swift */; };
 		D1C36D7A277BB20D00207A1B /* MoviesRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D79277BB20D00207A1B /* MoviesRepositoryStub.swift */; };
 		D1C36D7D277BB56000207A1B /* RepositoryClientStubTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D7C277BB56000207A1B /* RepositoryClientStubTestable.swift */; };
 		D1C36D7F277BB76000207A1B /* TestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D7E277BB76000207A1B /* TestErrors.swift */; };
+		D1C36D81277BC0CE00207A1B /* SingleInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D80277BC0CE00207A1B /* SingleInteractorStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +74,10 @@
 		D1C36D69277ABBF700207A1B /* ShowParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowParams.swift; sourceTree = "<group>"; };
 		D1C36D6B277AC45000207A1B /* GetTVShowDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowDetailInteractor.swift; sourceTree = "<group>"; };
 		D1C36D6D277AC5D600207A1B /* TVShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetail.swift; sourceTree = "<group>"; };
-		D1C36D76277B80C000207A1B /* SingleInteractorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleInteractorStub.swift; path = ../../../../../../../Applications/SingleInteractorStub.swift; sourceTree = "<group>"; };
 		D1C36D79277BB20D00207A1B /* MoviesRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepositoryStub.swift; sourceTree = "<group>"; };
 		D1C36D7C277BB56000207A1B /* RepositoryClientStubTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryClientStubTestable.swift; sourceTree = "<group>"; };
 		D1C36D7E277BB76000207A1B /* TestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrors.swift; sourceTree = "<group>"; };
+		D1C36D80277BC0CE00207A1B /* SingleInteractorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleInteractorStub.swift; sourceTree = "<group>"; };
 		D2075892D2DA6A9EBD7F537A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		D303E54E989DBF97F6E610F6 /* Pods-theMovieDB-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMovieDB-Domain.release.xcconfig"; path = "Target Support Files/Pods-theMovieDB-Domain/Pods-theMovieDB-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		E4F9533D4D77139A31A472DE /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C36D78277BB15C00207A1B /* RepositoryMock */,
-				D1C36D76277B80C000207A1B /* SingleInteractorStub.swift */,
+				D1C36D80277BC0CE00207A1B /* SingleInteractorStub.swift */,
 				D1C36D7C277BB56000207A1B /* RepositoryClientStubTestable.swift */,
 				D1C36D7E277BB76000207A1B /* TestErrors.swift */,
 			);
@@ -484,10 +484,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C36D7A277BB20D00207A1B /* MoviesRepositoryStub.swift in Sources */,
-				D1C36D77277B80C000207A1B /* SingleInteractorStub.swift in Sources */,
 				D1C36D7D277BB56000207A1B /* RepositoryClientStubTestable.swift in Sources */,
 				D182C7402777032600C8303A /* GetPopularMoviesInteractorTest.swift in Sources */,
 				D1C36D7F277BB76000207A1B /* TestErrors.swift in Sources */,
+				D1C36D81277BC0CE00207A1B /* SingleInteractorStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
