@@ -35,6 +35,12 @@
 		D1C36D7F277BB76000207A1B /* TestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D7E277BB76000207A1B /* TestErrors.swift */; };
 		D1C36D81277BC0CE00207A1B /* SingleInteractorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D80277BC0CE00207A1B /* SingleInteractorStub.swift */; };
 		D1C36D83277BC57B00207A1B /* GetTopRatedMoviesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D82277BC57B00207A1B /* GetTopRatedMoviesInteractorTests.swift */; };
+		D1C36D85277BC68B00207A1B /* GetUpcomingMoviesInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D84277BC68B00207A1B /* GetUpcomingMoviesInteractorTest.swift */; };
+		D1C36D87277BC75E00207A1B /* GetMovieDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D86277BC75E00207A1B /* GetMovieDetailInteractorTest.swift */; };
+		D1C36D8B277BCDA800207A1B /* GetPopularTVShowsInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D8A277BCDA800207A1B /* GetPopularTVShowsInteractorTest.swift */; };
+		D1C36D8D277BCDE400207A1B /* TVShowsRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D8C277BCDE400207A1B /* TVShowsRepositoryStub.swift */; };
+		D1C36D8F277BCFCA00207A1B /* GetTopRatedTVShowsInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D8E277BCFCA00207A1B /* GetTopRatedTVShowsInteractorTest.swift */; };
+		D1C36D91277BD08800207A1B /* GetTVShowDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D90277BD08800207A1B /* GetTVShowDetailInteractorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +86,12 @@
 		D1C36D7E277BB76000207A1B /* TestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrors.swift; sourceTree = "<group>"; };
 		D1C36D80277BC0CE00207A1B /* SingleInteractorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleInteractorStub.swift; sourceTree = "<group>"; };
 		D1C36D82277BC57B00207A1B /* GetTopRatedMoviesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopRatedMoviesInteractorTests.swift; sourceTree = "<group>"; };
+		D1C36D84277BC68B00207A1B /* GetUpcomingMoviesInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUpcomingMoviesInteractorTest.swift; sourceTree = "<group>"; };
+		D1C36D86277BC75E00207A1B /* GetMovieDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailInteractorTest.swift; sourceTree = "<group>"; };
+		D1C36D8A277BCDA800207A1B /* GetPopularTVShowsInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPopularTVShowsInteractorTest.swift; sourceTree = "<group>"; };
+		D1C36D8C277BCDE400207A1B /* TVShowsRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsRepositoryStub.swift; sourceTree = "<group>"; };
+		D1C36D8E277BCFCA00207A1B /* GetTopRatedTVShowsInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopRatedTVShowsInteractorTest.swift; sourceTree = "<group>"; };
+		D1C36D90277BD08800207A1B /* GetTVShowDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTVShowDetailInteractorTest.swift; sourceTree = "<group>"; };
 		D2075892D2DA6A9EBD7F537A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		D303E54E989DBF97F6E610F6 /* Pods-theMovieDB-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theMovieDB-Domain.release.xcconfig"; path = "Target Support Files/Pods-theMovieDB-Domain/Pods-theMovieDB-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		E4F9533D4D77139A31A472DE /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C36D79277BB20D00207A1B /* MoviesRepositoryStub.swift */,
+				D1C36D8C277BCDE400207A1B /* TVShowsRepositoryStub.swift */,
 			);
 			path = RepositoryMock;
 			sourceTree = "<group>";
@@ -278,10 +291,31 @@
 		D1C36D7B277BB54C00207A1B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D182C73F2777032600C8303A /* GetPopularMoviesInteractorTest.swift */,
-				D1C36D82277BC57B00207A1B /* GetTopRatedMoviesInteractorTests.swift */,
+				D1C36D89277BCD2700207A1B /* TVShowInteractors */,
+				D1C36D88277BCD1800207A1B /* MovieInteractors */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		D1C36D88277BCD1800207A1B /* MovieInteractors */ = {
+			isa = PBXGroup;
+			children = (
+				D182C73F2777032600C8303A /* GetPopularMoviesInteractorTest.swift */,
+				D1C36D82277BC57B00207A1B /* GetTopRatedMoviesInteractorTests.swift */,
+				D1C36D84277BC68B00207A1B /* GetUpcomingMoviesInteractorTest.swift */,
+				D1C36D86277BC75E00207A1B /* GetMovieDetailInteractorTest.swift */,
+			);
+			path = MovieInteractors;
+			sourceTree = "<group>";
+		};
+		D1C36D89277BCD2700207A1B /* TVShowInteractors */ = {
+			isa = PBXGroup;
+			children = (
+				D1C36D8A277BCDA800207A1B /* GetPopularTVShowsInteractorTest.swift */,
+				D1C36D8E277BCFCA00207A1B /* GetTopRatedTVShowsInteractorTest.swift */,
+				D1C36D90277BD08800207A1B /* GetTVShowDetailInteractorTest.swift */,
+			);
+			path = TVShowInteractors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,12 +520,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C36D8F277BCFCA00207A1B /* GetTopRatedTVShowsInteractorTest.swift in Sources */,
+				D1C36D85277BC68B00207A1B /* GetUpcomingMoviesInteractorTest.swift in Sources */,
 				D1C36D7A277BB20D00207A1B /* MoviesRepositoryStub.swift in Sources */,
 				D1C36D7D277BB56000207A1B /* RepositoryClientStubTestable.swift in Sources */,
 				D182C7402777032600C8303A /* GetPopularMoviesInteractorTest.swift in Sources */,
 				D1C36D83277BC57B00207A1B /* GetTopRatedMoviesInteractorTests.swift in Sources */,
 				D1C36D7F277BB76000207A1B /* TestErrors.swift in Sources */,
 				D1C36D81277BC0CE00207A1B /* SingleInteractorStub.swift in Sources */,
+				D1C36D8B277BCDA800207A1B /* GetPopularTVShowsInteractorTest.swift in Sources */,
+				D1C36D8D277BCDE400207A1B /* TVShowsRepositoryStub.swift in Sources */,
+				D1C36D87277BC75E00207A1B /* GetMovieDetailInteractorTest.swift in Sources */,
+				D1C36D91277BD08800207A1B /* GetTVShowDetailInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

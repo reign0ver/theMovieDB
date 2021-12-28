@@ -74,7 +74,7 @@ extension ShowDetailViewModel {
         let getTVShowDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail>
         
         init(_ getMovieDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> = GetMovieDetailInteractor(movieRepository),
-             _ getTVShowDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> = GetTVShowDetailInteractor(tvShowsRepository: tvShowRepository)) {
+             _ getTVShowDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> = GetTVShowDetailInteractor(tvShowRepository)) {
             self.getMovieDetailInteractor = getMovieDetailInteractor
             self.getTVShowDetailInteractor = getTVShowDetailInteractor
         }
