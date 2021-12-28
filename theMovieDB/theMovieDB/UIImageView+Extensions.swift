@@ -17,7 +17,7 @@ extension UIImageView {
         self.kf.indicatorType = .activity
         self.kf.setImage(
             with: imageURL, 
-            options: [.scaleFactor(UIScreen.main.scale), .transition(.fade(0.2)), .cacheMemoryOnly]
+            options: [.scaleFactor(UIScreen.main.scale), .transition(.fade(0.25)), .cacheMemoryOnly]
         )
     }
 }
