@@ -10,15 +10,15 @@ import RxSwift
 
 final class HTTPClient: HTTPClientType {
     
-    func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type) -> Single<ServerResponse<T>> {
-        return Single<ServerResponse<T>>.create { emitter -> Disposable in
+    func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type) -> Single<T> {
+        return Single<T>.create { emitter -> Disposable in
             guard let urlRequest = try? endpoint.asURLRequest() else {
                 emitter(.failure(NetworkError.invalidURL))
                 return Disposables.create()
             }
             
             let dataRequest = AF.request(urlRequest)
-            dataRequest.responseDecodable(of: ServerResponse<T>.self, queue: .global(qos: .background)) { [weak self] dataResponse in
+            dataRequest.responseDecodable(of: T.self, queue: .global(qos: .background)) { [weak self] dataResponse in
                 switch dataResponse.result {
                 case .success(let serverResponse):
                     emitter(.success(serverResponse))
@@ -31,7 +31,7 @@ final class HTTPClient: HTTPClientType {
         }
     }
     
-    private func handleError<T: Codable>(_ error: AFError, emitter: (SingleEvent<ServerResponse<T>>) -> Void) {
+    private func handleError<T: Codable>(_ error: AFError, emitter: (SingleEvent<T>) -> Void) {
         if error.isResponseSerializationError {
             emitter(.failure(NetworkError.responseSerializacion))
         } else if error.isInvalidURLError {

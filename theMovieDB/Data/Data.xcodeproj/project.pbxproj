@@ -25,6 +25,8 @@
 		D17E65D42777A7D0006F68D8 /* TVShowRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65D32777A7D0006F68D8 /* TVShowRemoteDataSource.swift */; };
 		D17E65D62777A7D6006F68D8 /* MovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65D52777A7D6006F68D8 /* MovieRemoteDataSource.swift */; };
 		D17E65D82777A7FB006F68D8 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65D72777A7FB006F68D8 /* NetworkConstants.swift */; };
+		D1C36D5D277AA8E500207A1B /* APIMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D5C277AA8E500207A1B /* APIMovieDetail.swift */; };
+		D1C36D5F277AABC400207A1B /* APITVShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D5E277AABC400207A1B /* APITVShowDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		D17E65D32777A7D0006F68D8 /* TVShowRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowRemoteDataSource.swift; sourceTree = "<group>"; };
 		D17E65D52777A7D6006F68D8 /* MovieRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRemoteDataSource.swift; sourceTree = "<group>"; };
 		D17E65D72777A7FB006F68D8 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		D1C36D5C277AA8E500207A1B /* APIMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMovieDetail.swift; sourceTree = "<group>"; };
+		D1C36D5E277AABC400207A1B /* APITVShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITVShowDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				D17E65B52777A4F2006F68D8 /* APIMovie.swift */,
+				D1C36D5C277AA8E500207A1B /* APIMovieDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				D17E65B42777A4F2006F68D8 /* APITVShow.swift */,
+				D1C36D5E277AABC400207A1B /* APITVShowDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,8 +380,10 @@
 				D17E65B92777A4F2006F68D8 /* ServerResponse.swift in Sources */,
 				D17E65C12777A5E1006F68D8 /* HTTPClientType.swift in Sources */,
 				D17E65BF2777A5E1006F68D8 /* HTTPClient.swift in Sources */,
+				D1C36D5F277AABC400207A1B /* APITVShowDetail.swift in Sources */,
 				D17E65C82777A629006F68D8 /* MoviesEndpoints.swift in Sources */,
 				D17E65D42777A7D0006F68D8 /* TVShowRemoteDataSource.swift in Sources */,
+				D1C36D5D277AA8E500207A1B /* APIMovieDetail.swift in Sources */,
 				D17E65B72777A4F2006F68D8 /* APITVShow.swift in Sources */,
 				D15431022777B9330015998C /* MovieRepository.swift in Sources */,
 				D17E65C72777A629006F68D8 /* TVShowEndpoints.swift in Sources */,

@@ -21,10 +21,10 @@ final class TVShowRemoteDataSource: TVShowRemoteDataSourceType {
     }
     
     func getPopularTVShows(endpoint: EndpointType) -> Single<ServerResponse<APITVShow>> {
-        return client.sendRequest(endpoint, of: APITVShow.self)
+        return client.sendRequest(endpoint, of: ServerResponse<APITVShow>.self)
     }
     
     func getTopRatedTVShows(endpoint: EndpointType) -> Single<ServerResponse<APITVShow>> {
-        return client.sendRequest(endpoint, of: APITVShow.self)
+        return client.sendRequest(endpoint, of: ServerResponse<APITVShow>.self)
     }
 }

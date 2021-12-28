@@ -11,6 +11,7 @@ protocol MovieRemoteDataSourceType {
     func getPopularMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>>
     func getTopRatedMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>>
     func getUpcomingMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>>
+    func getMovieDetail(endpoint: EndpointType) -> Single<APIMovieDetail>
 }
 
 final class MovieRemoteDataSource: MovieRemoteDataSourceType {
@@ -21,14 +22,18 @@ final class MovieRemoteDataSource: MovieRemoteDataSourceType {
     }
     
     func getPopularMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>> {
-        return client.sendRequest(endpoint, of: APIMovie.self)
+        return client.sendRequest(endpoint, of: ServerResponse<APIMovie>.self)
     }
     
     func getTopRatedMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>> {
-        return client.sendRequest(endpoint, of: APIMovie.self)
+        return client.sendRequest(endpoint, of: ServerResponse<APIMovie>.self)
     }
     
     func getUpcomingMovies(endpoint: EndpointType) -> Single<ServerResponse<APIMovie>> {
-        return client.sendRequest(endpoint, of: APIMovie.self)
+        return client.sendRequest(endpoint, of: ServerResponse<APIMovie>.self)
+    }
+    
+    func getMovieDetail(endpoint: EndpointType) -> Single<APIMovieDetail> {
+        return client.sendRequest(endpoint, of: APIMovieDetail.self)
     }
 }

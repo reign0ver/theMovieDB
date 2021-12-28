@@ -8,7 +8,7 @@
 import RxSwift
 
 protocol HTTPClientType {
-    func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type) -> Single<ServerResponse<T>>
+    func sendRequest<T: Codable>(_ endpoint: EndpointType, of: T.Type) -> Single<T>
 }
 
 enum NetworkError: Swift.Error {
