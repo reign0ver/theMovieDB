@@ -1,5 +1,13 @@
 # theMovieDB
 
+## IMPORTANT!
+`/Pods` folder and `Podfile.lock` weren't uploaded to the repo
+
+to run the app it should be enough having CocoaPods installed and running `pod install`inside `/theMovieDB` folder
+
+![grab-landing-page](https://github.com/reign0ver/theMovieDB/blob/master/app_dark.gif)
+![grab-landing-page](https://github.com/reign0ver/theMovieDB/blob/master/app_light.gif)
+
 This app was created under the principles of Clean Architecture
 
 I got inspired a lot in the Hexagonal Architecture, that's why I decided to modularize the app in 3 layers:
