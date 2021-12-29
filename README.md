@@ -37,7 +37,8 @@ so yeah, besides the endpoints enums and the API models the last thing we can fi
 
 to finish this readme I would like to tell you how is the flow in the app and how layers and how communicate between them:
 
-https://miro.medium.com/max/1400/1*MzkbfQsYb0wTBFeqplRoKg.png![image](https://user-images.githubusercontent.com/37129888/147635687-01c0cc18-1c06-4177-8f7e-6eea05a791ff.png)
+![Screen Shot 2021-12-29 at 2 01 46 AM](https://user-images.githubusercontent.com/37129888/147635788-ae2467c5-5995-4715-8608-8140259ef4ff.png)
+
 
 * it starts when you open the app, in the viewDidLoad() the view trigger a call to the viewModel to fetch all the movies and tvShows (view holds its respective viewModel)
 * the viewModel holds the interactors or interactors that it needs and then execute the useCase needed
