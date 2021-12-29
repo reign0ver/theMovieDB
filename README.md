@@ -37,6 +37,8 @@ so yeah, besides the endpoints enums and the API models the last thing we can fi
 
 to finish this readme I would like to tell you how is the flow in the app and how layers and how communicate between them:
 
+https://miro.medium.com/max/1400/1*MzkbfQsYb0wTBFeqplRoKg.png![image](https://user-images.githubusercontent.com/37129888/147635687-01c0cc18-1c06-4177-8f7e-6eea05a791ff.png)
+
 * it starts when you open the app, in the viewDidLoad() the view trigger a call to the viewModel to fetch all the movies and tvShows (view holds its respective viewModel)
 * the viewModel holds the interactors or interactors that it needs and then execute the useCase needed
 * we didnt talk about the dependency rule between layers yet, but Domain layer is the most inner layer of the architecture and it cannot know anything about other layers, so that's why it only contains the contracts (protocols) of the repository. 
@@ -45,6 +47,7 @@ to finish this readme I would like to tell you how is the flow in the app and ho
 * publishSubject is a private property so the holder (the view) cannot send events randomly, we expose it to the view through a func and we subscribe to it from the view to listen the events the viewModel send to us!
 
 **im really sorry about not talking about the dependency rule at the beginning, but this is basically what im talking about:**
+
 ![Screen Shot 2021-12-29 at 1 49 26 AM](https://user-images.githubusercontent.com/37129888/147634978-60999583-8f16-4ae2-b51a-766eca1770cc.png)
 
 as we can see the dependency rules comes from the outside to the inside of the circle, being our presentation layer and our framework/infrastructure layers the outer ones, they can know domain and data, and data can also know domain, but domain only knows domain, that why we invert dependencies having the contract of the repositories in here but the implementation of them in our Data layer, this way we're not breaking the dependency rule!
