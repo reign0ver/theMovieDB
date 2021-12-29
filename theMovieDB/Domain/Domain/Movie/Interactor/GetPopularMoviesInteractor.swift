@@ -10,7 +10,7 @@ import RxSwift
 public final class GetPopularMoviesInteractor: SingleInteractor<ShowParams, [Movie]> {
     private let moviesRepository: MovieRepositoryType
     
-    public init(_ moviesRepository: MovieRepositoryType) {
+    public init(moviesRepository: MovieRepositoryType) {
         self.moviesRepository = moviesRepository
     }
     

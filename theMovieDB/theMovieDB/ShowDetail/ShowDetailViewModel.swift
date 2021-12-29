@@ -68,13 +68,13 @@ private extension ShowDetailViewModel {
     }
 }
 
-extension ShowDetailViewModel {
-    struct Dependencies {
+extension ShowDetailViewModel: MVVMViewModel {
+    struct Dependencies: MVVMViewModelDependencies {
         let getMovieDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail>
         let getTVShowDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail>
         
-        init(_ getMovieDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> = GetMovieDetailInteractor(movieRepository),
-             _ getTVShowDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> = GetTVShowDetailInteractor(tvShowRepository)) {
+        init(_ getMovieDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> = injectGetMovieDetailInteractor(),
+             _ getTVShowDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> = injectGetTVShowDetailInteractor()) {
             self.getMovieDetailInteractor = getMovieDetailInteractor
             self.getTVShowDetailInteractor = getTVShowDetailInteractor
         }

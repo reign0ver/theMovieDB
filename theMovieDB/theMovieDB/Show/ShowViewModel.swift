@@ -116,8 +116,8 @@ private extension ShowViewModel {
     }
 }
 
-extension ShowViewModel {
-    struct Dependencies {
+extension ShowViewModel: MVVMViewModel {
+    struct Dependencies: MVVMViewModelDependencies {
         let getPopularMoviesInteractor: SingleInteractor<ShowParams, [Movie]>
         let getTopRatedMoviesInteractor: SingleInteractor<ShowParams, [Movie]>
         let getUpcomingMoviesInteractor: SingleInteractor<ShowParams, [Movie]>
@@ -125,11 +125,12 @@ extension ShowViewModel {
         let getPopularTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]>
         let getTopRatedTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]>
         
-        init(_ getPopularMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = GetPopularMoviesInteractor(movieRepository),
-             _ getTopRatedMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = GetTopRatedMoviesInteractor(movieRepository),
-             _ getUpcomingMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = GetUpcomingMoviesInteractor(movieRepository),
-             _ getPopularTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> = GetPopularTVShowsInteractor(tvShowRepository),
-             _ getTopRatedTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> = GetTopRatedTVShowsInteractor(tvShowRepository)) {
+        init(_ getPopularMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = injectGetPopularMoviesInteractor(),
+             _ getTopRatedMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = injectGetTopRatedMoviesInteractor(),
+             _ getUpcomingMoviesInteractor: SingleInteractor<ShowParams, [Movie]> = injectGetUpcomingMoviesInteractor(),
+             _ getPopularTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> = injectGetPopularTVShowsInteractor(),
+             _ getTopRatedTVShowsInteractor: SingleInteractor<ShowParams, [TVShow]> = injectGetTopRatedTVShowsInteractor()
+        ) {
             self.getPopularMoviesInteractor = getPopularMoviesInteractor
             self.getTopRatedMoviesInteractor = getTopRatedMoviesInteractor
             self.getUpcomingMoviesInteractor = getUpcomingMoviesInteractor

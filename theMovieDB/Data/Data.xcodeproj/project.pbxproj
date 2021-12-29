@@ -28,6 +28,7 @@
 		D17E65D82777A7FB006F68D8 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E65D72777A7FB006F68D8 /* NetworkConstants.swift */; };
 		D1C36D5D277AA8E500207A1B /* APIMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D5C277AA8E500207A1B /* APIMovieDetail.swift */; };
 		D1C36D5F277AABC400207A1B /* APITVShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D5E277AABC400207A1B /* APITVShowDetail.swift */; };
+		D1C36D9B277C252800207A1B /* DataDependenciesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C36D9A277C252800207A1B /* DataDependenciesProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D17E65D72777A7FB006F68D8 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		D1C36D5C277AA8E500207A1B /* APIMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMovieDetail.swift; sourceTree = "<group>"; };
 		D1C36D5E277AABC400207A1B /* APITVShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITVShowDetail.swift; sourceTree = "<group>"; };
+		D1C36D9A277C252800207A1B /* DataDependenciesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependenciesProtocol.swift; sourceTree = "<group>"; };
 		F88A5C3654611CF8958A3AE7 /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
 		FF40FB7FD5994509AEE73CE1 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				D17E65BA2777A593006F68D8 /* Network */,
 				D17E65AD2777A387006F68D8 /* APIModel */,
 				D17E65932777A25F006F68D8 /* Data.h */,
+				D1C36D9A277C252800207A1B /* DataDependenciesProtocol.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				D17E65C82777A629006F68D8 /* MoviesEndpoints.swift in Sources */,
 				D17E65D42777A7D0006F68D8 /* TVShowRemoteDataSource.swift in Sources */,
 				D1C36D5D277AA8E500207A1B /* APIMovieDetail.swift in Sources */,
+				D1C36D9B277C252800207A1B /* DataDependenciesProtocol.swift in Sources */,
 				D17E65B72777A4F2006F68D8 /* APITVShow.swift in Sources */,
 				D15431022777B9330015998C /* MovieRepository.swift in Sources */,
 				D17E65C72777A629006F68D8 /* TVShowEndpoints.swift in Sources */,

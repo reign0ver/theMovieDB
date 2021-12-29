@@ -34,4 +34,8 @@ final class TVShowRepository: TVShowRepositoryType {
     }
 }
 
-public let tvShowRepository: TVShowRepositoryType = TVShowRepository()
+public extension DataDependencies {
+    static func injectTVShowRepository() -> TVShowRepositoryType {
+        return TVShowRepository()
+    }
+}

@@ -10,7 +10,7 @@ import RxSwift
 public final class GetTVShowDetailInteractor: SingleInteractor<ShowDetailParams, ShowDetail> {
     private let tvShowsRepository: TVShowRepositoryType
     
-    public init(_ tvShowsRepository: TVShowRepositoryType) {
+    public init(tvShowsRepository: TVShowRepositoryType) {
         self.tvShowsRepository = tvShowsRepository
     }
     
