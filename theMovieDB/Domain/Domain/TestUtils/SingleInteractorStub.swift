@@ -1,24 +1,28 @@
 //
 //  SingleInteractorStub.swift
-//  DomainTests
+//  Domain
 //
 //  Created by Andres Enrique Carrillo Miranda on 28/12/21.
 //
 
 import RxSwift
-import Domain
 
-class SingleInteractorStub<Params, Response>: SingleInteractor<Params, Response> {
+open class SingleInteractorStub<Params, Response>: SingleInteractor<Params, Response> {
     
-    enum InteractorStubCase {
+    public enum InteractorStubCase {
         case success(Response)
         case failure(Error)
     }
     
-    var responseHandler: InteractorStubCase = .failure(InteractorStubError.missingResponseHandler)
+    open var responseHandler: InteractorStubCase!
     
-    override func buildUseCase(params: Params) -> Single<Response> {
-        switch responseHandler {
+    public override init() {
+        super.init()
+        responseHandler = .failure(InteractorStubError.missingResponseHandler)
+    }
+    
+    open override func buildUseCase(params: Params) -> Single<Response> {
+        switch responseHandler! {
         case let .success(response):
             return Single.just(response)
         case .failure(let error):
@@ -27,11 +31,11 @@ class SingleInteractorStub<Params, Response>: SingleInteractor<Params, Response>
     }
 }
 
-enum InteractorStubError: Error {
+public enum InteractorStubError: Error {
     case missingResponseHandler
     case expectedError
     
-    var errorDescription: String {
+    public var errorDescription: String {
         switch self {
         case .missingResponseHandler:
             return "Response handler not defined in Stub"
