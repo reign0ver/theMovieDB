@@ -35,7 +35,7 @@ well, let's start by URLRequestConvertible: this thing is a protocol that can be
 
 so yeah, besides the endpoints enums and the API models the last thing we can find in here is my HTTPClient which is basically the class that let us make requests to a backend and consuming any API (RxSwift is used from here to make async calls in the entire app)
 
-to finish this readme I would like to tell you how is the flow in the app and how layers and how communicate between them:
+to finish this readme I would like to tell you how is the flow in the app and how layers communicate between them:
 
 ![Screen Shot 2021-12-29 at 2 01 46 AM](https://user-images.githubusercontent.com/37129888/147635788-ae2467c5-5995-4715-8608-8140259ef4ff.png)
 
