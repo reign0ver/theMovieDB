@@ -37,8 +37,7 @@ so yeah, besides the endpoints enums and the API models the last thing we can fi
 
 to finish this readme I would like to tell you how is the flow in the app and how layers communicate between them:
 
-![Screen Shot 2021-12-29 at 2 01 46 AM](https://user-images.githubusercontent.com/37129888/147635788-ae2467c5-5995-4715-8608-8140259ef4ff.png)
-
+![Screen Shot 2021-12-29 at 2 10 19 AM](https://user-images.githubusercontent.com/37129888/147636394-7c645f82-733a-403e-a11a-b7e73bb53f60.png)
 
 * it starts when you open the app, in the viewDidLoad() the view trigger a call to the viewModel to fetch all the movies and tvShows (view holds its respective viewModel)
 * the viewModel holds the interactors or interactors that it needs and then execute the useCase needed
@@ -50,6 +49,8 @@ to finish this readme I would like to tell you how is the flow in the app and ho
 **im really sorry about not talking about the dependency rule at the beginning, but this is basically what im talking about:**
 
 ![Screen Shot 2021-12-29 at 1 49 26 AM](https://user-images.githubusercontent.com/37129888/147634978-60999583-8f16-4ae2-b51a-766eca1770cc.png)
+
+![Screen Shot 2021-12-29 at 2 01 46 AM](https://user-images.githubusercontent.com/37129888/147635788-ae2467c5-5995-4715-8608-8140259ef4ff.png)
 
 as we can see the dependency rules comes from the outside to the inside of the circle, being our presentation layer and our framework/infrastructure layers the outer ones, they can know domain and data, and data can also know domain, but domain only knows domain, that why we invert dependencies having the contract of the repositories in here but the implementation of them in our Data layer, this way we're not breaking the dependency rule!
 
