@@ -18,7 +18,7 @@ final class GetTopRatedMoviesInteractorTests: XCTestCase {
     override func setUp() {
         super.setUp()
         repositoryStub = MoviesRepositoryStub()
-        sut = GetTopRatedMoviesInteractor(repositoryStub)
+        sut = GetTopRatedMoviesInteractor(moviesRepository: repositoryStub)
     }
     
     override func tearDown() {

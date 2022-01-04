@@ -18,7 +18,7 @@ final class GetTVShowDetailInteractorTest: XCTestCase {
     override func setUp() {
         super.setUp()
         repositoryStub = TVShowsRepositoryStub()
-        sut = GetTVShowDetailInteractor(repositoryStub)
+        sut = GetTVShowDetailInteractor(tvShowsRepository: repositoryStub)
     }
     
     override func tearDown() {
