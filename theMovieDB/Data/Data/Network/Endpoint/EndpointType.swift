@@ -22,8 +22,6 @@ extension EndpointType {
     
     func asURLRequest() throws -> URLRequest {
         let url = try baseURL.asURL().appendingPathComponent(path)
-//        url.appendPathComponent("?api_key=\(NetworkConstants.apiKey)") //TODO: this can be a parameter, check it later
-        
         var urlRequest = try URLRequest(url: url, method: httpMethod)
         urlRequest.timeoutInterval = 20
         urlRequest.httpMethod = httpMethod.rawValue
